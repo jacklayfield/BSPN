@@ -1,12 +1,11 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-const Hockey = () => {
+
+export function Hockey() {
   return (
     <div>
-      <h3>Hockey</h3>
-      <div>
-        <img src="./hockey.jpg" />
-      </div>
+      <h2>Hockey</h2>
+      <img src={"./hockey.jpg"} alt="Cannot display image" />
     </div>
   );
-};
-export default Hockey;
+}
