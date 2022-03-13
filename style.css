@@ -1,0 +1,16 @@
+
+  .class1,
+  .class2,
+  .class3 {
+    width: 33.33%;
+    float: left;
+    height: 100px;
+  }
+  #navbarSupportedContent {
+    padding-top: 25px; 
+  }
+
+
+/* .navbar-nav>li, .navbar-nav {
+    float: left !important;
+} */
