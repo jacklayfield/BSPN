@@ -2,12 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { NavBar } from "../components/navBar";
 
-export function Football() {
+export function Home() {
   return (
     <div>
       <NavBar />
-      <h2>Football</h2>
-      <img src={"./football.jpg"} alt="Cannot display" />
+      <h1>Bobcat Sports Home</h1>
     </div>
   );
 }

@@ -5,7 +5,7 @@ class PageLayout extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Component</h2>
+        <h2>NOT YET IMPLEMENTED</h2>
       </div>
     );
   }

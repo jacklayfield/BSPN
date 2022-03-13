@@ -1,79 +1,30 @@
-import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { React, useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "../styling/nav.css";
 
-class NavBar extends Component {
-  render() {
-    return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            BSPN
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/hockey">
-                  Pricing
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown link
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <a class="dropdown-item" href="/hockey">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/hockey">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/hockey">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
+export function NavBar() {
+  const nRef = useRef();
+
+  const switchNav = () => {
+    nRef.current.classList.toggle("responsive_nav");
+  };
+
+  return (
+    <header>
+      <img src={"./radford.png"} alt="Cannot display logo" />
+      <nav ref={nRef}>
+        <a href="/">Home</a>
+        <a href="/hockey">Hockey</a>
+        <a href="/football">Football</a>
+        <button className="nav-btn nav-close-btn" onClick={switchNav}>
+          <FaTimes />
+        </button>
       </nav>
-    );
-  }
-}
 
-export default NavBar;
+      <button className="nav-btn" onClick={switchNav}>
+        <FaBars />
+      </button>
+    </header>
+  );
+}
