@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { NavBar } from "../components/navBar";
+import { Footer } from "../components/footer";
 
-class PageLayout extends Component {
-  render() {
-    return (
-      <div className="container">
-        <h2>NOT YET IMPLEMENTED</h2>
-      </div>
-    );
-  }
+export function PageLayout({ children }) {
+  return (
+    <div style={{ background: "#f9f9f9" }}>
+      <NavBar />
+      <div class="m-5">{children}</div>
+      <Footer />
+    </div>
+  );
 }
-
-export default PageLayout;
