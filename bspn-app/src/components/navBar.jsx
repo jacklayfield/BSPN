@@ -1,8 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { React, useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import "../styling/nav.css";
+//import "../styling/nav.css";
 
 export function NavBar() {
   const nRef = useRef();
@@ -12,7 +11,10 @@ export function NavBar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light navbar-fixed-top">
+    <nav
+      style={{ background: "#E9E9E9" }}
+      className="navbar navbar-expand-sm navbar-light navbar-fixed-top"
+    >
       <a className="navbar-brand mb-0 h1" href="/">
         <img
           className="d-inline-block align-top"
@@ -20,7 +22,7 @@ export function NavBar() {
           height="30"
           width="30"
         />
-        Bobccat Sports
+        Bobcat Sports
       </a>
       <button
         type="button"
