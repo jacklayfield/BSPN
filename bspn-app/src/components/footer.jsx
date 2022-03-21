@@ -1,10 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import "../styling/body.css";
 
 export function Footer() {
   return (
-    <footer style={{ background: "#E9E9E9" }} class="text-center ">
+    <footer style={{ background: "#DAA520" }} class="text-center " id="footer">
       <div class="container p-1">
         <section class="mb-3">
           <a
@@ -41,7 +42,7 @@ export function Footer() {
       <div
         class="text-center p-3"
         style={{
-          background: "#C7C7C7",
+          background: "#FFFFFF",
           color: "#858585",
           fontFamily: "Trebuchet MS",
           fontStyle: "italic",

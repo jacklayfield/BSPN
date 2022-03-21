@@ -12,15 +12,15 @@ export function NavBar() {
 
   return (
     <nav
-      style={{ background: "#E9E9E9" }}
+      style={{ background: "#DAA520" }}
       className="navbar navbar-expand-sm navbar-light navbar-fixed-top"
     >
       <a className="navbar-brand mb-0 h1" href="/">
         <img
           className="d-inline-block align-top"
-          src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/205151241_1728263054037111_4601375418838296056_n.png?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=UmFUJ6eqiZgAX_GNTX0&tn=DTP7hXUjHTBjrbMB&_nc_ht=scontent-iad3-1.xx&oh=00_AT9M1eRlwP2ngp4edjA-a7HJ8KB9zWyNTOKO2JaOlGzUvw&oe=6248D6AA"
+          src="https://i.postimg.cc/tJ2mbWqY/205151241-1728263054037111-4601375418838296056-n-removebg-preview.png"
           height="30"
-          width="30"
+          width="35"
         />
         Bobcat Sports
       </a>
