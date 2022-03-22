@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { React, useRef } from "react";
-//import "../styling/nav.css";
+import "../styling/nav.css";
 
 export function NavBar() {
   const nRef = useRef();
@@ -10,11 +10,14 @@ export function NavBar() {
     nRef.current.classList.toggle("responsive_nav");
   };
 
+  function uploadContent() {
+    console.log("HelloWorld");
+  }
+
+  function login() {}
+
   return (
-    <nav
-      style={{ background: "#DAA520" }}
-      className="navbar navbar-expand-sm navbar-light navbar-fixed-top"
-    >
+    <nav className="navbar navbar-expand-sm navbar-light navbar-fixed-top">
       <a className="navbar-brand mb-0 h1" href="/">
         <img
           className="d-inline-block align-top"
@@ -83,6 +86,17 @@ export function NavBar() {
           </li>
         </ul>
       </div>
+      <button className="admin" type="button" id="login" onClick={login}>
+        Log In
+      </button>
+      <button
+        className="admin"
+        type="button"
+        id="upload"
+        onClick={uploadContent}
+      >
+        Upload
+      </button>
     </nav>
     //{/*
     //<nav ref={nRef}>

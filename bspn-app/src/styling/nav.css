@@ -1,3 +1,25 @@
+nav {
+  background: #daa520;
+}
+#upload {
+  position: relative;
+  right: 20px;
+}
+#login {
+  position: relative;
+  right: 30px;
+}
+
+.admin {
+  border-radius: 12px;
+  background-color: #a17f1a;
+  color: black;
+  font-weight: bold;
+}
+
+/*
+
+
 * {
   padding: 0;
   margin: 0;
@@ -78,4 +100,10 @@ nav a:hover {
   nav a {
     font-size: 2.5rem;
   }
+  #upload {
+    position: fixed;
+    top: 300;
+    left: 5000;
+  }
 }
+*/
