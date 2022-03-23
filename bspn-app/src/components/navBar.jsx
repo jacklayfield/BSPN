@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { React, useRef } from "react";
 import "../styling/nav.css";
+import { Modal } from "../pages/modal";
 
 export function NavBar() {
   const nRef = useRef();
@@ -9,12 +10,6 @@ export function NavBar() {
   const switchNav = () => {
     nRef.current.classList.toggle("responsive_nav");
   };
-
-  function uploadContent() {
-    console.log("HelloWorld");
-  }
-
-  function login() {}
 
   return (
     <nav className="navbar navbar-expand-sm navbar-light navbar-fixed-top">
@@ -86,18 +81,11 @@ export function NavBar() {
           </li>
         </ul>
       </div>
-      <button className="admin" type="button" id="login" onClick={login}>
-        Log In
-      </button>
-      <button
-        className="admin"
-        type="button"
-        id="upload"
-        onClick={uploadContent}
-      >
+      <a className="admin nav-link" id="upload" href={"/modal"}>
         Upload
-      </button>
+      </a>
     </nav>
+
     //{/*
     //<nav ref={nRef}>
     //<a href="/">Home</a>

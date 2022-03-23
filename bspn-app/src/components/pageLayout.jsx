@@ -9,13 +9,7 @@ export function PageLayout({ children }) {
   return (
     <div style={{ background: "#000000", color: "#DAA520" }}>
       <NavBar />
-      <div class="m-5" style={{ height: "90%" }}>
-        {children}
-      </div>
-      <body>
-        <Feed />
-        <br></br>
-      </body>
+      <div style={{ height: "100%" }}>{children}</div>
       <Footer />
     </div>
   );

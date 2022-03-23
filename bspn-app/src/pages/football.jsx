@@ -5,8 +5,16 @@ import { NavBar } from "../components/navBar";
 export function Football() {
   return (
     <div>
-      <h2>Football</h2>
-      <img src={"./football.jpg"} alt="Cannot display" />
+      <div class="m-5">
+        <h2>Football</h2>
+      </div>
+      <body>
+        <img
+          src={"./football.jpg"}
+          alt="Cannot display"
+          style={{ height: "50%", width: "50%" }}
+        />
+      </body>
     </div>
   );
 }
