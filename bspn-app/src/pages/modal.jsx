@@ -8,6 +8,7 @@ export function Modal() {
       <div class="m-5">
         <h1>Content Upload</h1>
       </div>
+
       <body>
         <form id="newtask" role="form">
           <div class="modal-body">

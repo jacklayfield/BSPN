@@ -8,6 +8,7 @@ export function Hockey() {
       <div class="m-5">
         <h2>Hockey</h2>
       </div>
+
       <body>
         <img
           src={"./hockey.jpg"}

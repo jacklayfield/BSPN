@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { Feed } from "../components/feed";
-import { NavBar } from "../components/navBar";
+import { Line } from "../components/line";
 
 export function Home() {
   return (
@@ -9,7 +9,8 @@ export function Home() {
       <div class="m-5">
         <h1>Bobcat Sports Home</h1>
       </div>
-      <body>
+      <body id="feed-body">
+        <Line />
         <Feed />
       </body>
     </div>

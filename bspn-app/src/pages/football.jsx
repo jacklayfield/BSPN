@@ -8,6 +8,7 @@ export function Football() {
       <div class="m-5">
         <h2>Football</h2>
       </div>
+
       <body>
         <img
           src={"./football.jpg"}
