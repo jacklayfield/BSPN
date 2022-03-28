@@ -5,6 +5,7 @@ Now using cloud instance of MongoDB (on my account, working on figuring out how 
 "backend" has been renamed to "api" <br />
 node_modules deleted and gitignored for api, run npm install inside BSPN/api <br />
 Install dependencies: express, mongoose, dotenv, multer, bcrypt <br />
+Tutorial: https://www.youtube.com/watch?v=tlTdbc5byAs&t=0s <bt />
 
 Developer Environment Notes:  <br /> 
 ------------------------------------------------------------------------------------- 
