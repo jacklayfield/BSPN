@@ -1,3 +1,5 @@
+//THIS IS THE SERVER
+
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -7,6 +9,7 @@ const bspnRoutes = express.Router();
 const PORT = 4000;
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
+const usersRoute = require("./routes/users");
 
 dotenv.config();
 app.use(express.json());
@@ -27,6 +30,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/api/auth", authRoute);
+app.use("/api/users", usersRoute);
 
 bspnRoutes.route("/").get(function (req, res) {
   Score.find(function (err, scores) {
