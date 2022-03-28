@@ -1,4 +1,11 @@
 # BSPN
+Updates:  <br /> 
+------------------------------------------------------------------------------------- 
+Now using cloud instance of MongoDB (on my account, working on figuring out how to share it with everyone) <br />
+"backend" has been renamed to "api" <br />
+node_modules deleted and gitignored for api, run npm install inside BSPN/api <br />
+Install dependencies: express, mongoose, dotenv, multer, bcrypt <br />
+
 Developer Environment Notes:  <br /> 
 ------------------------------------------------------------------------------------- 
 
@@ -19,13 +26,12 @@ https://docs.mongodb.com/manual/administration/install-community/ <br />
 Running Instructions:  <br /> 
 ------------------------------------------------------------------------------------- 
 
-Backend: <br />
-    Go to BSPN/backend directory and type "mongod" to start instance od the database <br />
-    Go to BSPN/backend directory and type "nodemon server" to start the server <br />
+Api: <br />
+    Go to BSPN/api directory and type "npm start" to start the server <br />
     
 Frontend: <br />
     Go to BSPN/bspn-app direcotry and type "npm start" to run front end application <br />
     
-    
+
     
 
