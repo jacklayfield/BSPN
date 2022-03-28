@@ -7,7 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Hockey } from "./pages/hockey";
 import { Home } from "./pages/home";
 import { Football } from "./pages/football";
-import { Modal } from "./pages/modal";
+import { Upload } from "./pages/upload";
+import { Login } from "./pages/login";
 import { PageLayout } from "./components/pageLayout";
 
 ReactDOM.render(
@@ -17,7 +18,8 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/hockey" element={<Hockey />} />
         <Route path="/football" element={<Football />} />
-        <Route path="/modal" element={<Modal />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </PageLayout>
   </Router>,

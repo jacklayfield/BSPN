@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { NavBar } from "../components/navBar";
 
-export function Modal() {
+export function Upload() {
   return (
     <div>
       <div class="m-5">

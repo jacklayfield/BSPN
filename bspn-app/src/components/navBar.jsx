@@ -2,7 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { React, useRef } from "react";
 import "../styling/nav.css";
-import { Modal } from "../pages/modal";
+import { Upload } from "../pages/upload";
+import { Login } from "../pages/login";
 
 export function NavBar() {
   const nRef = useRef();
@@ -81,7 +82,10 @@ export function NavBar() {
           </li>
         </ul>
       </div>
-      <a className="admin nav-link" id="upload" href={"/modal"}>
+      <a className="admin nav-link" id="login" href={"/login"}>
+        Log In
+      </a>
+      <a className="admin nav-link" id="upload" href={"/upload"}>
         Upload
       </a>
     </nav>
