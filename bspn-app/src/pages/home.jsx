@@ -27,10 +27,9 @@ export default function Home() {
       {loading && <div>Loading</div>}
       {!loading && (
         <div>
-          <Feed />
           <h2>BSPN</h2>
           <Line />
-          <Articles articles={articles} /> <Line />
+          <Feed />
           <Line />
         </div>
       )}

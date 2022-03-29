@@ -2,11 +2,15 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import "../styling/body.css";
+import { Line } from "./line";
 
 export function Footer() {
   return (
     <footer style={{ background: "#DAA520" }} class="text-center " id="footer">
-      <div class="container p-1">
+      <div>
+        <hr id="footerline"></hr>
+      </div>
+      <div class="container p-1" id="socials">
         <section class="mb-3">
           <a
             class="btn btn-primary btn-floating m-1"
@@ -47,6 +51,7 @@ export function Footer() {
           fontFamily: "Trebuchet MS",
           fontStyle: "italic",
         }}
+        id="poweredby"
       >
         Powered by&nbsp;
         <a href="https://cs.vt.edu/">BSPN</a>

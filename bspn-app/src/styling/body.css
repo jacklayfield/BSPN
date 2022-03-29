@@ -94,7 +94,18 @@ body {
 #line {
   height: 5px;
   color: #daa520;
-  background-color: #daa520;
+  background-color: black;
+  margin-top: 0px;
+  opacity: 1;
+}
+#socials {
+  color: black;
+  height: 100px;
+  margin-top: 0px;
+}
+#footerline {
+  height: 10px;
+  background-color: black;
   margin-top: 0px;
   opacity: 1;
 }
