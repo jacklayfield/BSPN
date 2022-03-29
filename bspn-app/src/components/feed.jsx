@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../styling/body.css";
-import Article from "../components/article";
+// import Article from "../components/article";
 import { Score } from "../components/score";
 import { Broadcast } from "../components/broadcast";
 
@@ -18,9 +18,7 @@ export function Feed() {
           </div>
         </div>
       </div>
-      <div className="first-third">
-        <Article />
-      </div>
+      <div className="first-third">{/* <Article /> */}</div>
       <div className="third-third video">
         <h2>Latest Broadcasts</h2>
         <div class="grid-container">

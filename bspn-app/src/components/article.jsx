@@ -7,6 +7,7 @@ export default function Article({ article }) {
   return (
     <article id="article">
       <h2 className="paragraph-text">{article.title}</h2>
+      <p className="paragraph-text">{article.description}</p>
       {/* {console.log(article.title)} */}
       <h2 id="article-title">Volleyball Game</h2>
       <div id="article-content">
