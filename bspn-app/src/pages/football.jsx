@@ -5,7 +5,7 @@ import { NavBar } from "../components/navBar";
 export function Football() {
   return (
     <div>
-      <div class="m-5">
+      <div className="m-5">
         <h2>Football</h2>
       </div>
 

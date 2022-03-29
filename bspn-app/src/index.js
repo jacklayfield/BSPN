@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Hockey } from "./pages/hockey";
-import { Home } from "./pages/home";
+import Home from "./pages/home";
 import { Football } from "./pages/football";
 import { Upload } from "./pages/upload";
 import { Login } from "./pages/login";
