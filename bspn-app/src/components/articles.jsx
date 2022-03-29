@@ -7,7 +7,7 @@ export default function Articles({ articles }) {
       {console.log(articles[1])}
       {console.log(articles[2])}
       {console.log(articles[3])}
-      {articles[1].title}
+      {/* {articles[1].title} */}
       {/* {articles.map((a) => (
         <Article article={a} />
       ))} */}
