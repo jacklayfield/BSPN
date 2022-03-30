@@ -29,7 +29,7 @@ export default function Home() {
         <div>
           <h2>BSPN</h2>
           <Line />
-          <Feed />
+          <Feed articles={articles} />
           <Line />
         </div>
       )}

@@ -9,23 +9,7 @@ import { Broadcast } from "../components/broadcast";
 import { Line } from "../components/line";
 import Articles from "../components/articles";
 
-export function Feed() {
-  const [loading, setLoading] = useState(true);
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    const fetchArticles = async () => {
-      setLoading(true);
-      try {
-        const res = await axios.get("/posts");
-        setArticles(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-      setLoading(false);
-    };
-    fetchArticles();
-  }, []);
+export function Feed({ articles }) {
   return (
     <div id="flex" className="row">
       <div className="second-third">

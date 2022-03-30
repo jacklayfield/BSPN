@@ -7,9 +7,9 @@ import "../styling/body.css";
 
 export function PageLayout({ children }) {
   return (
-    <div style={{ background: "#000000", color: "#DAA520" }}>
+    <div style={{ background: "#e3e3e3", color: "#DAA520" }}>
       <NavBar />
-      <div style={{ height: "100%" }}>{children}</div>
+      <div style={{ height: "100%", paddingBottom: 92 }}>{children}</div>
       <Footer />
     </div>
   );

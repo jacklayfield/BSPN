@@ -5,18 +5,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Article({ article }) {
   return (
-    <article id="article">
-      <h2 className="paragraph-text">{article.title}</h2>
-      <p className="paragraph-text">{article.description}</p>
-      {/* {console.log(article.title)} */}
-      <h2 id="article-title">Volleyball Game</h2>
+    <div className="main-body">
+      <h2 id="article-title">{article.title}</h2>
       <div id="article-content">
         <ul className="list-inline">
-          <li className="list-inline-item">By: Author </li>
-          <li className="list-inline-item">Date</li>
+          <li className="list-inline-item">By: {article.author}</li>
+          <li className="list-inline-item">Date: Example</li>
         </ul>
-        <p>sick ass volleyball game</p>
+        <p className="paragraph-text">{article.description}</p>
       </div>
-    </article>
+    </div>
   );
 }

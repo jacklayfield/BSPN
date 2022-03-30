@@ -1,4 +1,10 @@
+.title-text {
+  font-weight: bold;
+  font-family: Georgia;
+  color: rgb(0, 0, 0);
+}
 .paragraph-text {
   font-weight: bold;
-  color: beige;
+  font-family: Helvetica;
+  color: rgb(0, 0, 0);
 }

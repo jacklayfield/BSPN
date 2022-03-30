@@ -10,8 +10,8 @@ export function Footer() {
       <div>
         <hr id="footerline"></hr>
       </div>
-      <div class="container p-1" id="socials">
-        <section class="mb-3">
+      <div>
+        <section class="mb-1">
           <a
             class="btn btn-primary btn-floating m-1"
             style={{ background: "#3b5998" }}
@@ -37,14 +37,9 @@ export function Footer() {
             <FaInstagram />
           </a>
         </section>
-        <section class="mb-4">
-          <p style={{ fontFamily: "Trebuchet MS" }}>
-            Don't forget to follow us!
-          </p>
-        </section>
       </div>
       <div
-        class="text-center p-3"
+        class="text-center p-1"
         style={{
           background: "#FFFFFF",
           color: "#858585",
