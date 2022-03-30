@@ -1,6 +1,11 @@
 nav {
   background: #daa520;
 }
+#stickyNavbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
 #upload {
   position: relative;
   right: 20px;

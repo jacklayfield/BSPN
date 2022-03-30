@@ -13,7 +13,7 @@ export function NavBar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-light navbar-fixed-top">
+    <nav className="navbar navbar-expand-sm navbar-light navbar-fixed-top" id="stickyNavbar">
       <a className="navbar-brand mb-0 h1" href="/">
         <img
           className="d-inline-block align-top"
