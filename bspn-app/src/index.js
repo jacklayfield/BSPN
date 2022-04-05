@@ -10,6 +10,7 @@ import { Football } from "./pages/sports-pages/football";
 import { Upload } from "./pages/misc/upload";
 import { Login } from "./pages/misc/login";
 import { PageLayout } from "./components/pageLayout";
+import ArticlePage from "./pages/misc/articlePage";
 
 ReactDOM.render(
   <Router>
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route path="/football" element={<Football />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/post/:postId" element={<ArticlePage />} />
       </Routes>
     </PageLayout>
   </Router>,

@@ -1,8 +1,29 @@
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import { NavBar } from "../../components/navBar";
 
 export function Upload() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [author, setAuthor] = useState("");
+  //const [file, setFile] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newPost = {
+      title,
+      description,
+      author,
+    };
+    //add picture handling here
+    try {
+      const res = await axios.post("/posts", newPost);
+      window.location.replace("/");
+    } catch (err) {
+      console.log("error with posting");
+    }
+  };
   return (
     <div>
       <div class="m-5">
@@ -10,7 +31,7 @@ export function Upload() {
       </div>
 
       <body>
-        <form id="newtask" role="form">
+        <form id="newtask" role="form" onSubmit={handleSubmit}>
           <div class="modal-body">
             <div class="form-group">
               <label for="title">Title</label>
@@ -19,6 +40,7 @@ export function Upload() {
                 class="form-control"
                 id="title"
                 placeholder="Title your article"
+                onChange={(e) => setTitle(e.target.value)}
               />
             </div>
             <div class="form-group">
@@ -28,9 +50,10 @@ export function Upload() {
                 class="form-control"
                 id="author"
                 placeholder="Enter your name"
+                onChange={(e) => setAuthor(e.target.value)}
               />
             </div>
-            <div class="form-group">
+            {/* <div class="form-group">
               <label for="date">
                 <span class="glyphicon glyphicon-calendar"></span> Date
               </label>
@@ -40,7 +63,7 @@ export function Upload() {
                 id="date"
                 placeholder="mm/dd/yyyy"
               />
-            </div>
+            </div> */}
             <div class="form-group">
               <label for="task-note">
                 <span class="glyphicon glyphicon-pencil"></span> Content
@@ -50,11 +73,12 @@ export function Upload() {
                 rows="7"
                 id="content"
                 placeholder="Enter your article."
+                onChange={(e) => setDescription(e.target.value)}
               ></textarea>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="upload" class="btn btn-success btn-default pull-left">
+            <button type="submit" class="btn btn-success btn-default pull-left">
               <span class="glyphicon glyphicon-off"></span> Upload
             </button>
           </div>
