@@ -1,10 +1,11 @@
 import Article from "../components/article";
-import { Line } from "./line";
+// import { Line } from "./line";
 
 export default function Articles({ articles }) {
+  const rev_articles = articles.reverse();
   return (
     <div>
-      {articles.map((a) => (
+      {rev_articles.map((a) => (
         <Article article={a} />
       ))}
     </div>

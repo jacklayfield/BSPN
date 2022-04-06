@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Articles from "../components/articles";
-import { Feed } from "../components/feed";
-import { Line } from "../components/line";
+// import Articles from "../../components/articles";
+import { Feed } from "../../components/feed";
+import { Line } from "../../components/line";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);

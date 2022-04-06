@@ -1,17 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import { NavBar } from "../components/navBar";
+// import { NavBar } from "../../components/navBar";
 
-export function Football() {
+export function Hockey() {
   return (
     <div>
-      <div className="m-5">
-        <h2>Football</h2>
+      <div class="m-5">
+        <h2>Hockey</h2>
       </div>
 
       <body>
         <img
-          src={"./football.jpg"}
+          src={"./hockey.jpg"}
           alt="Cannot display"
           style={{ height: "50%", width: "50%" }}
         />

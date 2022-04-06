@@ -4,12 +4,13 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Hockey } from "./pages/hockey";
-import Home from "./pages/home";
-import { Football } from "./pages/football";
-import { Upload } from "./pages/upload";
-import { Login } from "./pages/login";
+import { Hockey } from "./pages/sports-pages/hockey";
+import Home from "./pages/misc/home";
+import { Football } from "./pages/sports-pages/football";
+import { Upload } from "./pages/misc/upload";
+import { Login } from "./pages/misc/login";
 import { PageLayout } from "./components/pageLayout";
+import ArticlePage from "./pages/misc/articlePage";
 
 ReactDOM.render(
   <Router>
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route path="/football" element={<Football />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/post/:postId" element={<ArticlePage />} />
       </Routes>
     </PageLayout>
   </Router>,

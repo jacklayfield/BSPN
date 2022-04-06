@@ -2,18 +2,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { React, useRef } from "react";
 import "../styling/nav.css";
-import { Upload } from "../pages/upload";
-import { Login } from "../pages/login";
+// import { Upload } from "../pages/misc/upload";
+// import { Login } from "../pages/misc/login";
 
 export function NavBar() {
-  const nRef = useRef();
+  // const nRef = useRef();
 
-  const switchNav = () => {
-    nRef.current.classList.toggle("responsive_nav");
-  };
+  // const switchNav = () => {
+  //   nRef.current.classList.toggle("responsive_nav");
+  // };
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-light navbar-fixed-top">
+    <nav
+      className="navbar navbar-expand-sm navbar-light navbar-fixed-top"
+      id="stickyNavbar"
+    >
       <a className="navbar-brand mb-0 h1" href="/">
         <img
           className="d-inline-block align-top"
@@ -37,7 +40,7 @@ export function NavBar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="/">
+            <a style={{ fontWeight: "bold" }} className="nav-link" href="/">
               Home
             </a>
           </li>
@@ -47,13 +50,20 @@ export function NavBar() {
             </a>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" href="/hockey">
+            <a
+              style={{
+                fontWeight: "bold",
+              }}
+              className="nav-link"
+              href="/hockey"
+            >
               Hockey
             </a>
           </li>
           <li className="nav-item dropdown">
             <a
               href="/"
+              style={{ fontWeight: "bold" }}
               className="nav-link dropdown-toggle"
               id="navbarDropdown"
               role="button"
