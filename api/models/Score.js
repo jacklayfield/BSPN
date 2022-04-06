@@ -16,11 +16,11 @@ const ScoreSchema = new mongoose.Schema(
     },
     score1: {
       type: String,
-      required: true,
+      required: false,
     },
     score2: {
       type: String,
-      required: true,
+      required: false,
     },
     date: {
         type: String,
