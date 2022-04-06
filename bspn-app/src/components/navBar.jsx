@@ -42,8 +42,8 @@ export function NavBar() {
             </a>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" href="/football">
-              Football
+            <a className="nav-link" href="/schedule">
+              Schedule
             </a>
           </li>
           <li className="nav-item active">
