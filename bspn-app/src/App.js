@@ -17,7 +17,7 @@ class App extends Component {
           <Route exact path="/" element={<Football />} />
           <Route path="/hockey" element={<Hockey />} />
           <Route path="/modal" element={<Modal />} />
-          <Route exact path="/schedule" element={<Schedule />} />
+          <Route path="/schedule" element={<Schedule />} />
         </Routes>
       </div>
     );
