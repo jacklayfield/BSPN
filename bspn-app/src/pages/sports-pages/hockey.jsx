@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 // import { NavBar } from "../../components/navBar";
+import { SportsPage } from "../misc/sportsPageLayout";
 
 export function Hockey() {
   return (
@@ -10,11 +11,7 @@ export function Hockey() {
       </div>
 
       <body>
-        <img
-          src={"./hockey.jpg"}
-          alt="Cannot display"
-          style={{ height: "50%", width: "50%" }}
-        />
+        <SportsPage />
       </body>
     </div>
   );
