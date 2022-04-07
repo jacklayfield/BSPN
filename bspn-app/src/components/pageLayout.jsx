@@ -6,9 +6,9 @@ import { Feed } from "../components/feed";
 
 export function PageLayout({ children }) {
   return (
-    <div style={{ height:"100%", background: "rgb(227, 227, 227)", color: "#DAA520" }}>
+    <div style={{ position: "absolute", height:"100%", background: "rgb(227, 227, 227)"}}>
       <NavBar />
-      <div style={{ height: "100%", background: "rgb(227, 227, 227)", paddingBottom: 92 }}>{children}</div>
+      <div style={{background: "rgb(227, 227, 227)"}}>{children}</div>
       <Footer />
     </div>
   );

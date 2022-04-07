@@ -10,7 +10,7 @@
 }
 
 .main-body {
-  background-color: rgb(235, 235, 235);
+  background-color: white;
 }
 
 .postDesc {
@@ -23,3 +23,12 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.postTitle {
+  font-family: Georgia;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+  color:black;
+}
+a:link { text-decoration: none; }

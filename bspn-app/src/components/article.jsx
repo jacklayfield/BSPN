@@ -8,7 +8,7 @@ export default function Article({ article }) {
   return (
     <div className="main-body">
       <Link to={`/post/${article._id}`}>
-        <h2 id="article-title">{article.title}</h2>
+      <span className="postTitle">{article.title}</span>
       </Link>
       <div id="article-content">
         <ul className="list-inline">
