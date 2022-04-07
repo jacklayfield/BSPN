@@ -13,9 +13,9 @@ export default function Article({ article }) {
       <div id="article-content">
         <ul className="list-inline">
           <li className="list-inline-item">By: {article.author}</li>
-          <li className="list-inline-item">Date: Example</li>
+          <li className="list-inline-item">Date: ex</li>
         </ul>
-        <p className="paragraph-text">{article.description}</p>
+        <p className="postDesc">{article.description}</p>
       </div>
     </div>
   );
