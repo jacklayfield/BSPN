@@ -85,11 +85,12 @@ router.get("/", async (req, res) => {
 
 router.get("/sport=:sport", async (req, res) => {
   try {
-    const score = await Post.find({ sport: { $regex: req.params.sport } });
-    res.status(200).json(score);
+    const post = await Post.find({ "sport": { $regex: req.params.sport } });
+    res.status(200).json(post);
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;

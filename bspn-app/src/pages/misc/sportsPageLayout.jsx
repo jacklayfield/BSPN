@@ -12,12 +12,14 @@ import { Broadcast } from "../../components/broadcast";
 export function SportsPage({ sportname }) {
   const [loading, setLoading] = useState(true);
   const [articles, setArticles] = useState([]);
+  console.log(sportname);
 
   useEffect(() => {
     const fetchArticles = async () => {
       setLoading(true);
       try {
         const res = await axios.get("/posts");
+        console.log(res);
         setArticles(res.data);
       } catch (err) {
         console.log(err);

@@ -10,9 +10,7 @@ export function Football() {
         <h2>Football</h2>
       </div>
 
-      <body>
-        <SportsPage />
-      </body>
+      <body>{/* <SportsPage /> */}</body>
     </div>
   );
 }
