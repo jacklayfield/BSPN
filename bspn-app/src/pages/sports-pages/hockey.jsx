@@ -6,7 +6,7 @@ import { SportsPage } from "../misc/sportsPageLayout";
 export function Hockey() {
   return (
     <div>
-      <div class="m-5">
+      <div>
         <h2>Hockey</h2>
       </div>
 

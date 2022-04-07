@@ -29,10 +29,10 @@ export function SportsPage({ sportname }) {
     fetchArticles();
   }, []);
   return (
-    <div>
+    <div style={{height:"100%", background:"rgb(227, 227, 227)"}}>
       {loading && <div>Loading</div>}
       {!loading && (
-        <div>
+        <div >
           {/* <h2>{sportname}</h2>
   <Line />
   <div id="flex" className="row">
@@ -52,7 +52,7 @@ export function SportsPage({ sportname }) {
   </div>
   <Line /> */}
           <Row>
-            <Col style={{ paddingLeft: 24 }}>
+            <Col style={{paddingLeft: 24 }}>
               <h2 style={{ textAlign: "center" }}>Schedule</h2>
               <Score sport={sportname} />
             </Col>
