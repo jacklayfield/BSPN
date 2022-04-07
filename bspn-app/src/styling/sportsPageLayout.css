@@ -1,0 +1,7 @@
+.web-title {
+  background-image: url("hockey.jpg");
+  padding: 40px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 50px;
+}

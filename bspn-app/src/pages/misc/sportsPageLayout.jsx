@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import Articles from "../../components/articles";
 import { Score } from "../../components/score";
 import { Broadcast } from "../../components/broadcast";
+import "../../styling/sportsPageLayout.css";
 
 export function SportsPage({ sportname }) {
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ export function SportsPage({ sportname }) {
     const fetchArticles = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("/posts/sport="+sportname);
+        const res = await axios.get("/posts/sport=" + sportname);
         console.log(res);
         setArticles(res.data);
       } catch (err) {
@@ -29,10 +30,10 @@ export function SportsPage({ sportname }) {
     fetchArticles();
   }, []);
   return (
-    <div style={{height:"100%", background:"rgb(227, 227, 227)"}}>
+    <div style={{ height: "100%", background: "rgb(227, 227, 227)" }}>
       {loading && <div>Loading</div>}
       {!loading && (
-        <div >
+        <div>
           {/* <h2>{sportname}</h2>
   <Line />
   <div id="flex" className="row">
@@ -51,8 +52,9 @@ export function SportsPage({ sportname }) {
     </div>
   </div>
   <Line /> */}
+          <h1 className="web-title">{sportname}</h1>
           <Row>
-            <Col style={{paddingLeft: 24 }}>
+            <Col style={{ paddingLeft: 24 }}>
               <h2 style={{ textAlign: "center" }}>Schedule</h2>
               <Score sport={sportname} />
             </Col>
