@@ -50,17 +50,18 @@ export function SportsPage({ sportname }) {
   </div>
   <Line /> */}
           <Row>
-            <Col>
+            <Col style={{ paddingLeft: 24 }}>
               <h2 style={{ textAlign: "center" }}>Recent Scores</h2>
-              <Score sport={sportname}/>
+              <Score sport={sportname} />
             </Col>
             <Col>
               <h2 style={{ textAlign: "center" }}>Articles</h2>
               <Articles articles={articles} />
             </Col>
-            <Col>
+            <Col style={{ paddingRight: 24 }}>
               <h2 style={{ textAlign: "center" }}>Latest Broadcasts</h2>
-              <Broadcast />
+              <Score sport={sportname} />
+              {/* <Broadcast /> */}
             </Col>
           </Row>
         </div>
