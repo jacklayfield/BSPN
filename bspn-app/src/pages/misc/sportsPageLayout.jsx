@@ -49,11 +49,10 @@ export function SportsPage({ sportname }) {
     </div>
   </div>
   <Line /> */}
-          <h2>{sportname}</h2>
           <Row>
             <Col>
               <h2 style={{ textAlign: "center" }}>Recent Scores</h2>
-              <Score />
+              <Score sport={sportname}/>
             </Col>
             <Col>
               <h2 style={{ textAlign: "center" }}>Articles</h2>
