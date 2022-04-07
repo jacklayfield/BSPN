@@ -8,7 +8,7 @@ export function Hockey() {
     <div>
       <h2>Hockey</h2>
       <body>
-        <SportsPage />
+        <SportsPage sportname={"hockey"}/>
       </body>
     </div>
   );
