@@ -18,7 +18,7 @@ export function SportsPage({ sportname }) {
     const fetchArticles = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("/posts");
+        const res = await axios.get("/posts/sport="+sportname);
         console.log(res);
         setArticles(res.data);
       } catch (err) {
@@ -53,7 +53,7 @@ export function SportsPage({ sportname }) {
   <Line /> */}
           <Row>
             <Col style={{ paddingLeft: 24 }}>
-              <h2 style={{ textAlign: "center" }}>Recent Scores</h2>
+              <h2 style={{ textAlign: "center" }}>Schedule</h2>
               <Score sport={sportname} />
             </Col>
             <Col>
@@ -61,7 +61,7 @@ export function SportsPage({ sportname }) {
               <Articles articles={articles} />
             </Col>
             <Col style={{ paddingRight: 24 }}>
-              <h2 style={{ textAlign: "center" }}>Latest Broadcasts</h2>
+              <h2 style={{ textAlign: "center" }}>Roster</h2>
               <Score sport={sportname} />
               {/* <Broadcast /> */}
             </Col>
