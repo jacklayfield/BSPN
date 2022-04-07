@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const ScoreSchema = new mongoose.Schema(
   {
     sport: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     team1: {
       type: String,
-      default: "Radford HS"
+      default: "Radford HS",
     },
     team2: {
       type: String,
@@ -23,12 +23,12 @@ const ScoreSchema = new mongoose.Schema(
       required: false,
     },
     date: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     time: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
   },
   { timestamps: true }
