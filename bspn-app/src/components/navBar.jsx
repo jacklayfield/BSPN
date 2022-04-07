@@ -58,6 +58,39 @@ export function NavBar() {
                 fontWeight: "bold",
               }}
               className="nav-link"
+              href="/football"
+            >
+              Football
+            </a>
+          </li>
+          <li className="nav-item active">
+            <a
+              style={{
+                fontWeight: "bold",
+              }}
+              className="nav-link"
+              href="/basketball"
+            >
+              Basketball
+            </a>
+          </li>
+          <li className="nav-item active">
+            <a
+              style={{
+                fontWeight: "bold",
+              }}
+              className="nav-link"
+              href="/baseball"
+            >
+              Baseball
+            </a>
+          </li>
+          <li className="nav-item active">
+            <a
+              style={{
+                fontWeight: "bold",
+              }}
+              className="nav-link"
               href="/hockey"
             >
               Hockey
@@ -73,7 +106,7 @@ export function NavBar() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown
+              More
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
