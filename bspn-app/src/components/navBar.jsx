@@ -45,7 +45,10 @@ export function NavBar() {
             </a>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" href="/schedule">
+            <a style={{
+                fontWeight: "bold",
+              }}
+              className="nav-link" href="/schedule">
               Schedule
             </a>
           </li>
