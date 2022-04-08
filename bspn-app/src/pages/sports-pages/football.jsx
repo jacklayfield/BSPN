@@ -6,12 +6,8 @@ import { SportsPage } from "../misc/sportsPageLayout";
 export function Football() {
   return (
     <div>
-      <div>
-        <h2>Football</h2>
-      </div>
-
       <body>
-        <SportsPage sportname={"football"}/>
+        <SportsPage sportname={"football"} />
       </body>
     </div>
   );

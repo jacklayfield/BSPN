@@ -58,7 +58,7 @@ export function SportsPage({ sportname }) {
               <h2 style={{ textAlign: "center" }}>Schedule</h2>
               <Score sport={sportname} />
             </Col>
-            <Col>
+            <Col xs={5}>
               <h2 style={{ textAlign: "center" }}>Articles</h2>
               <Articles articles={articles} />
             </Col>

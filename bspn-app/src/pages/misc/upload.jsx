@@ -36,6 +36,19 @@ export function Upload() {
         <form id="newtask" role="form" onSubmit={handleSubmit}>
           <div class="modal-body">
             <div class="form-group">
+              <label htmlFor="fileInput">
+                <i class="fa-solid fa-circle-plus fa-3x"></i>
+              </label>
+              <input id="fileInput" type="file" style={{ display: "none" }} />
+              {/* <input
+                className="writeInput"
+                placeholder="Title"
+                type="text"
+                autoFocus={true}
+              /> */}
+              <p>Add image</p>
+            </div>
+            <div class="form-group">
               <label for="title">Title</label>
               <input
                 type="text"
