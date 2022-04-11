@@ -22,11 +22,11 @@ export function SportsPage({ sportname }) {
     const fetchArticles = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("/posts/sport=" + sportname);
+        const res = await axios.get("/articles/sport=" + sportname);
         console.log(res);
         setArticles(res.data);
-      } catch (err) {
-        console.log(err);
+      } catch (error) {
+        console.log(error);
       }
       setLoading(false);
     };

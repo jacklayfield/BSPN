@@ -14,8 +14,8 @@ export function Score({ sport }) {
       try {
         const res = await axios.get("/scores/sport=" + sport);
         setScores(res.data);
-      } catch (err) {
-        console.log(err);
+      } catch (error) {
+        console.log(error);
       }
       setLoading(false);
     };

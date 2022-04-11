@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema(
   {
-    
     title: {
       type: String,
       required: true,
@@ -24,7 +23,6 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    
   },
   { timestamps: true }
 );

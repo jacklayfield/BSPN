@@ -7,8 +7,8 @@ router.post("/", async (req, res) => {
   try {
     const savedRoster = await newRoster.save();
     res.status(200).json(savedRoster);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
@@ -18,20 +18,19 @@ router.put("/:id", async (req, res) => {
     const roster = await Roster.findById(req.params.id);
 
     try {
-        const updatedRoster = await Roster.findByIdAndUpdate(
-          req.params.id,
-          {
-            $set: req.body,
-          },
-          { new: true }
-        );
-        res.status(200).json(updatedRoster);
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    
-  } catch (err) {
-    res.status(500).json(err);
+      const updatedRoster = await Roster.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: req.body,
+        },
+        { new: true }
+      );
+      res.status(200).json(updatedRoster);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
@@ -40,23 +39,23 @@ router.delete("/:id", async (req, res) => {
   try {
     const roster = await Roster.findById(req.params.id);
     try {
-        await roster.delete();
-        res.status(200).json("Roster deleted");
-      } catch (err) {
-        res.status(500).json(err);
+      await roster.delete();
+      res.status(200).json("Roster deleted");
+    } catch (error) {
+      res.status(500).json(error);
     }
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
 router.get("/sport=:sport", async (req, res) => {
-    try {
-      const roster = await Roster.find({"sport":{$regex: req.params.sport}});
-      res.status(200).json(roster);
-    } catch (err) {
-      res.status(500).json(err);
-    }
+  try {
+    const roster = await Roster.find({ sport: { $regex: req.params.sport } });
+    res.status(200).json(roster);
+  } catch (error) {
+    res.status(500).json(error);
+  }
 });
 
 //GET ROSTER
@@ -64,12 +63,10 @@ router.get("/id=:id", async (req, res) => {
   try {
     const roster = await Roster.findById(req.params.id);
     res.status(200).json(roster);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
-
-
 
 //GET ALL ROSTERS
 router.get("/", async (req, res) => {
@@ -82,8 +79,8 @@ router.get("/", async (req, res) => {
       rosters = await Roster.find();
     }
     res.status(200).json(rosters);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 

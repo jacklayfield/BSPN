@@ -1,8 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import { Link } from "react-router-dom";
 // import { NavBar } from "../../components/navBar";
 
 export function Login() {
+  const handleSubmit = (e) => {};
   return (
     <div>
       <div class="m-5">
@@ -10,7 +12,7 @@ export function Login() {
       </div>
 
       <body>
-        <form id="newtask" role="form">
+        <form id="newtask" role="form" onSubmit={handleSubmit}>
           <div class="modal-body">
             <div class="form-group">
               <label for="Username">Username</label>
@@ -33,7 +35,7 @@ export function Login() {
           </div>
           <div class="modal-footer">
             <a href="/login">Forgot Password</a>
-            <button type="login" class="btn btn-success btn-default pull-left">
+            <button type="submit" class="btn btn-success btn-default pull-left">
               <span class="glyphicon glyphicon-off"></span> Log In
             </button>
           </div>

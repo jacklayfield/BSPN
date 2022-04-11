@@ -25,7 +25,7 @@ ReactDOM.render(
         <Route path="/baseball" element={<Baseball />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/post/:postId" element={<ArticlePage />} />
+        <Route path="/article/:articleId" element={<ArticlePage />} />
       </Routes>
     </PageLayout>
   </Router>,

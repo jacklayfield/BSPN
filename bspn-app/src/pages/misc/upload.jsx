@@ -26,12 +26,14 @@ export function Upload() {
       newPost.picture = filename;
       try {
         await axios.post("/upload", data);
-      } catch (err) {}
+      } catch (error) {
+        console.log("error with upload");
+      }
     }
     try {
       const res = await axios.post("/posts", newPost);
       window.location.replace("/");
-    } catch (err) {
+    } catch (error) {
       console.log("error with posting");
     }
   };
@@ -42,9 +44,7 @@ export function Upload() {
       </div>
 
       <body>
-        {file && (
-          <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
-        )}
+        {file && <img src={URL.createObjectURL(file)} alt="" />}
         <form id="newtask" role="form" onSubmit={handleSubmit}>
           <div class="modal-body">
             <div class="form-group">

@@ -7,8 +7,8 @@ router.post("/", async (req, res) => {
   try {
     const savedScore = await newScore.save();
     res.status(200).json(savedScore);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
@@ -18,20 +18,19 @@ router.put("/:id", async (req, res) => {
     const score = await Score.findById(req.params.id);
 
     try {
-        const updatedPost = await Post.findByIdAndUpdate(
-          req.params.id,
-          {
-            $set: req.body,
-          },
-          { new: true }
-        );
-        res.status(200).json(updatedPost);
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    
-  } catch (err) {
-    res.status(500).json(err);
+      const updatedPost = await Post.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: req.body,
+        },
+        { new: true }
+      );
+      res.status(200).json(updatedPost);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
@@ -40,23 +39,23 @@ router.delete("/:id", async (req, res) => {
   try {
     const score = await Score.findById(req.params.id);
     try {
-        await post.delete();
-        res.status(200).json("Post deleted");
-      } catch (err) {
-        res.status(500).json(err);
+      await post.delete();
+      res.status(200).json("Post deleted");
+    } catch (error) {
+      res.status(500).json(error);
     }
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
 router.get("/sport=:sport", async (req, res) => {
-    try {
-      const score = await Score.find({"sport":{$regex: req.params.sport}});
-      res.status(200).json(score);
-    } catch (err) {
-      res.status(500).json(err);
-    }
+  try {
+    const score = await Score.find({ sport: { $regex: req.params.sport } });
+    res.status(200).json(score);
+  } catch (error) {
+    res.status(500).json(error);
+  }
 });
 
 //GET SCORE
@@ -64,12 +63,10 @@ router.get("/id=:id", async (req, res) => {
   try {
     const score = await Score.findById(req.params.id);
     res.status(200).json(score);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
-
-
 
 //GET ALL SCORES
 router.get("/", async (req, res) => {
@@ -82,8 +79,8 @@ router.get("/", async (req, res) => {
       scores = await Score.find();
     }
     res.status(200).json(scores);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
