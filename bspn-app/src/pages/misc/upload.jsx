@@ -8,7 +8,7 @@ export function Upload() {
   const [description, setDescription] = useState("");
   const [author, setAuthor] = useState("");
   const [sport, setSport] = useState("");
-  //const [file, setFile] = useState(null);
+  const [file, setFile] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +18,16 @@ export function Upload() {
       author,
       sport,
     };
-    //add picture handling here
+    if (file) {
+      const data = new FormData();
+      const filename = Date.now() + file.name;
+      data.append("name", filename);
+      data.append("file", file);
+      newPost.picture = filename;
+      try {
+        await axios.post("/upload", data);
+      } catch (err) {}
+    }
     try {
       const res = await axios.post("/posts", newPost);
       window.location.replace("/");
@@ -33,19 +42,21 @@ export function Upload() {
       </div>
 
       <body>
+        {file && (
+          <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
+        )}
         <form id="newtask" role="form" onSubmit={handleSubmit}>
           <div class="modal-body">
             <div class="form-group">
               <label htmlFor="fileInput">
                 <i class="fa-solid fa-circle-plus fa-3x"></i>
               </label>
-              <input id="fileInput" type="file" style={{ display: "none" }} />
-              {/* <input
-                className="writeInput"
-                placeholder="Title"
-                type="text"
-                autoFocus={true}
-              /> */}
+              <input
+                type="file"
+                id="fileInput"
+                style={{ display: "none" }}
+                onChange={(e) => setFile(e.target.files[0])}
+              />
               <p>Add image</p>
             </div>
             <div class="form-group">

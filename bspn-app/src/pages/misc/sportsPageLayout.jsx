@@ -15,6 +15,9 @@ export function SportsPage({ sportname }) {
   const [articles, setArticles] = useState([]);
   console.log(sportname);
 
+  const sportname_capitalized =
+    sportname.charAt(0).toUpperCase() + sportname.slice(1);
+
   useEffect(() => {
     const fetchArticles = async () => {
       setLoading(true);
@@ -52,7 +55,7 @@ export function SportsPage({ sportname }) {
     </div>
   </div>
   <Line /> */}
-          <h1 className="web-title">{sportname}</h1>
+          <h1 className="web-title">{sportname_capitalized}</h1>
           <Row>
             <Col style={{ paddingLeft: 24 }}>
               <h2 style={{ textAlign: "center" }}>Schedule</h2>
