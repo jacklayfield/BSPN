@@ -11,7 +11,7 @@ export default function Article({ article }) {
       {article.picture && (
         <img className="postImg" src={image_path + article.picture} alt="" />
       )}
-      <Link to={`/post/${article._id}`}>
+      <Link to={`/article/${article._id}`}>
         <span className="postTitle">{article.title}</span>
       </Link>
       <div id="article-content">
