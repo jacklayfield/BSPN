@@ -5,10 +5,8 @@ import { SportsPage } from "../misc/sportsPageLayout";
 
 export function Football() {
   return (
-    <div>
-      <div class="m-5">
+      <div>
         <h2>Football</h2>
-      </div>
 
       <body>
         <SportsPage />

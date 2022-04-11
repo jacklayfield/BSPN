@@ -4,6 +4,7 @@ import axios from "axios";
 // import Articles from "../../components/articles";
 import { Feed } from "../../components/feed";
 import { Line } from "../../components/line";
+import { Schedule } from "../schedule";
 
 export function SportsPage({ sportname }) {
   return (
@@ -11,21 +12,18 @@ export function SportsPage({ sportname }) {
       <h2>{sportname}</h2>
       <Line />
       <div id="flex" className="row">
-        <div className="second-third">
-          <div id="score-bar">
-            <h2>Recent Scores</h2>
-            <div class="grid-container"></div>
-          </div>
+        <div id="schedule-container" className="second-third">
+          <h4>Schedule</h4>
+          <Schedule />
         </div>
         <div className="first-third">
-          <h2>Articles</h2>
+          <h4>Articles</h4>
         </div>
         <div className="third-third video">
-          <h2>Latest Broadcasts</h2>
+          <h4>Roster</h4>
           <div class="grid-container"></div>
         </div>
       </div>
-      <Line />
     </div>
   );
 }
