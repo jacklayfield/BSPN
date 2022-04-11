@@ -5,17 +5,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 export default function Article({ article }) {
+  const image_path = "http://localhost:4000/images/";
   return (
     <div className="main-body">
-      <Link to={`/post/${article._id}`}>
-        <h2 id="article-title">{article.title}</h2>
+      {article.picture && (
+        <img className="postImg" src={image_path + article.picture} alt="" />
+      )}
+      <Link to={`/article/${article._id}`}>
+        <span className="postTitle">{article.title}</span>
       </Link>
       <div id="article-content">
         <ul className="list-inline">
           <li className="list-inline-item">By: {article.author}</li>
-          <li className="list-inline-item">Date: Example</li>
+          <li className="list-inline-item">Date: ex</li>
         </ul>
-        <p className="paragraph-text">{article.description}</p>
+        <p className="postDesc">{article.description}</p>
       </div>
     </div>
   );

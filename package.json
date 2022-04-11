@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.9",
+    "react-bootstrap": "^2.2.3"
   }
 }

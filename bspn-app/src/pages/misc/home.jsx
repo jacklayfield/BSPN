@@ -13,10 +13,10 @@ export default function Home() {
     const fetchArticles = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("/posts");
+        const res = await axios.get("/articles");
         setArticles(res.data);
-      } catch (err) {
-        console.log(err);
+      } catch (error) {
+        console.log(error);
       }
       setLoading(false);
     };

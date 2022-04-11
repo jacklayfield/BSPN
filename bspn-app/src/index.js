@@ -8,6 +8,8 @@ import { Hockey } from "./pages/sports-pages/hockey";
 import Home from "./pages/misc/home";
 import { Football } from "./pages/sports-pages/football";
 import { Schedule } from "./pages/schedule";
+import { Basketball } from "./pages/sports-pages/basketball";
+import { Baseball } from "./pages/sports-pages/baseball";
 import { Upload } from "./pages/misc/upload";
 import { Login } from "./pages/misc/login";
 import { PageLayout } from "./components/pageLayout";
@@ -20,10 +22,11 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/hockey" element={<Hockey />} />
         <Route path="/football" element={<Football />} />
-        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/basketball" element={<Basketball />} />
+        <Route path="/baseball" element={<Baseball />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/post/:postId" element={<ArticlePage />} />
+        <Route path="/article/:articleId" element={<ArticlePage />} />
       </Routes>
     </PageLayout>
   </Router>,
