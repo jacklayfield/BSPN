@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import Articles from "../../components/articles";
 import { Line } from "../../components/line";
+import { Schedule } from "../schedule";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Articles from "../../components/articles";

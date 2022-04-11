@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Hockey } from "./pages/sports-pages/hockey";
 import Home from "./pages/misc/home";
 import { Football } from "./pages/sports-pages/football";
+import { Schedule } from "./pages/schedule";
 import { Basketball } from "./pages/sports-pages/basketball";
 import { Baseball } from "./pages/sports-pages/baseball";
 import { Upload } from "./pages/misc/upload";
