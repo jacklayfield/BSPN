@@ -7,7 +7,8 @@ export function Upload() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [author, setAuthor] = useState("");
-  //const [file, setFile] = useState(null);
+  const [sport, setSport] = useState("");
+  const [file, setFile] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,12 +16,24 @@ export function Upload() {
       title,
       description,
       author,
+      sport,
     };
-    //add picture handling here
+    if (file) {
+      const data = new FormData();
+      const filename = Date.now() + file.name;
+      data.append("name", filename);
+      data.append("file", file);
+      newPost.picture = filename;
+      try {
+        await axios.post("/upload", data);
+      } catch (error) {
+        console.log("error with upload");
+      }
+    }
     try {
-      const res = await axios.post("/posts", newPost);
+      const res = await axios.post("/articles", newPost);
       window.location.replace("/");
-    } catch (err) {
+    } catch (error) {
       console.log("error with posting");
     }
   };
@@ -31,8 +44,21 @@ export function Upload() {
       </div>
 
       <body>
+        {file && <img src={URL.createObjectURL(file)} alt="" />}
         <form id="newtask" role="form" onSubmit={handleSubmit}>
           <div class="modal-body">
+            <div class="form-group">
+              <label htmlFor="fileInput">
+                <i class="fa-solid fa-circle-plus fa-3x"></i>
+              </label>
+              <input
+                type="file"
+                id="fileInput"
+                style={{ display: "none" }}
+                onChange={(e) => setFile(e.target.files[0])}
+              />
+              <p>Add image</p>
+            </div>
             <div class="form-group">
               <label for="title">Title</label>
               <input
@@ -51,6 +77,16 @@ export function Upload() {
                 id="author"
                 placeholder="Enter your name"
                 onChange={(e) => setAuthor(e.target.value)}
+              />
+            </div>
+            <div class="form-group">
+              <label for="sport">Sport</label>
+              <input
+                type="text"
+                class="form-control"
+                id="author"
+                placeholder="Enter the sport"
+                onChange={(e) => setSport(e.target.value)}
               />
             </div>
             {/* <div class="form-group">

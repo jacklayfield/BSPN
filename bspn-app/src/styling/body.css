@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background: "gray";
 }
 #content {
   flex: 1;
@@ -85,8 +86,8 @@ body {
   background-color: #daa520;
 }
 #score {
-  background-color: cornflowerblue;
-  border-radius: 15px;
+  background-color: white;
+  border-radius: 5px;
 }
 .score-title,
 .score-content {
