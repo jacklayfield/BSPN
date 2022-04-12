@@ -4,7 +4,6 @@ import "../styling/body.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export function Score({ sport }) {
-  const test = "/scores/" + sport;
   const [loading, setLoading] = useState(true);
   const [scores, setScores] = useState([]);
 
@@ -13,15 +12,25 @@ export function Score({ sport }) {
       setLoading(true);
       try {
         const res = await axios.get("/scores/sport=" + sport);
+        
         setScores(res.data);
+        if (sport.length === 0) {
+          const res1 = await axios.get("/scores");
+        
+        setScores(res1.data);
+        }
+        
       } catch (error) {
         console.log(error);
+        const res1 = await axios.get("/scores");
+        
+        setScores(res1.data);
       }
       setLoading(false);
     };
     fetchScores();
   }, []);
-  if (scores.length != 0) {
+  if (scores.length !== 0) {
     return (
       <div>
         {scores.map((a) => (
@@ -43,18 +52,11 @@ export function Score({ sport }) {
       </div>
     );
   }
+
+
   return (
     <div class="grid-item" id="score">
-      <h5 class="score-title">RHS vs GHS</h5>
-      <h5 class="score-content">
-        <ul class="list-inline">
-          <li class="list-inline-item">Score 1 </li>
-          <li class="list-inline-item">
-            <i class="bi bi-arrow-right-short"></i>
-          </li>
-          <li class="list-inline-item">Score 2 </li>
-        </ul>
-      </h5>
+      
     </div>
   );
 }

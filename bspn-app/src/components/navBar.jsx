@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { React, useRef } from "react";
 import "../styling/nav.css";
+import { Context } from "../context/context";
+import { useContext } from "react";
 // import { Upload } from "../pages/misc/upload";
 // import { Login } from "../pages/misc/login";
 
@@ -11,6 +13,11 @@ export function NavBar() {
   // const switchNav = () => {
   //   nRef.current.classList.toggle("responsive_nav");
   // };
+
+  const { user, dispatch } = useContext(Context);
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
 
   return (
     <nav
@@ -55,49 +62,31 @@ export function NavBar() {
               Schedule
             </a>
           </li>
-          <li className="nav-item active">
+          <li className="nav-item dropdown">
             <a
-              style={{
-                fontWeight: "bold",
-              }}
-              className="nav-link"
-              href="/football"
+              href="/"
+              style={{ fontWeight: "bold" }}
+              className="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
               Football
             </a>
-          </li>
-          <li className="nav-item active">
-            <a
-              style={{
-                fontWeight: "bold",
-              }}
-              className="nav-link"
-              href="/basketball"
-            >
-              Basketball
-            </a>
-          </li>
-          <li className="nav-item active">
-            <a
-              style={{
-                fontWeight: "bold",
-              }}
-              className="nav-link"
-              href="/baseball"
-            >
-              Baseball
-            </a>
-          </li>
-          <li className="nav-item active">
-            <a
-              style={{
-                fontWeight: "bold",
-              }}
-              className="nav-link"
-              href="/hockey"
-            >
-              Hockey
-            </a>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a href="/football" className="dropdown-item">
+                  Boys Varsity
+                </a>
+              </li>
+
+              <li>
+                <a href="/football" className="dropdown-item">
+                  Boys JV
+                </a>
+              </li>
+            </ul>
           </li>
           <li className="nav-item dropdown">
             <a
@@ -109,26 +98,69 @@ export function NavBar() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              More
+              Basketball
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a href="/" className="dropdown-item">
-                  Feature 1
+                <a href="/basketball" className="dropdown-item">
+                  Boys Varsity
                 </a>
               </li>
               <li>
-                <a href="/" className="dropdown-item">
-                  Feature 2
+                <a href="/basketball" className="dropdown-item">
+                  Girls Varisity
                 </a>
               </li>
               <li>
-                <a href="/" className="dropdown-item">
-                  Feature 3
+                <a href="/basketball" className="dropdown-item">
+                  Boys JV
+                </a>
+              </li>
+              <li>
+                <a href="/basketball" className="dropdown-item">
+                  Girls JV
                 </a>
               </li>
             </ul>
           </li>
+          <li className="nav-item dropdown">
+            <a
+              href="/"
+              style={{ fontWeight: "bold" }}
+              className="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Baseball
+            </a>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a href="/baseball" className="dropdown-item">
+                  Boys Varsity
+                </a>
+              </li>
+
+              <li>
+                <a href="/baseball" className="dropdown-item">
+                  Boys JV
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li className="nav-item active">
+            <a
+              style={{
+                fontWeight: "bold",
+              }}
+              className="nav-link"
+              href="/"
+            >
+              All Sports
+            </a>
+          </li>
+          <li onClick={handleLogout}>{user && "Logout"}</li>
         </ul>
       </div>
       <a className="admin nav-link" id="login" href={"/login"}>
