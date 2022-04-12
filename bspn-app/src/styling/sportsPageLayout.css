@@ -7,3 +7,11 @@
   font-size: 50px;
   font-weight: 1000;
 }
+
+.right_col {
+  padding-right: 0 !important;
+}
+
+.row_fix {
+  --bs-gutter-x: 0 !important;
+}

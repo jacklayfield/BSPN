@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Articles from "../../components/articles";
 import { Score } from "../../components/score";
-// import { Player } from "../../components/player";
+import { Player } from "../../components/player";
 import { Broadcast } from "../../components/broadcast";
 import "../../styling/sportsPageLayout.css";
 
@@ -35,7 +35,13 @@ export function SportsPage({ sportname }) {
     fetchArticles();
   }, []);
   return (
-    <div style={{ height: "100%", background: "rgb(227, 227, 227)" }}>
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        background: "rgb(227, 227, 227)",
+      }}
+    >
       {loading && <div>Loading</div>}
       {!loading && (
         <div>
@@ -58,8 +64,8 @@ export function SportsPage({ sportname }) {
   </div>
   <Line /> */}
           <h1 className="web-title">{sportname_capitalized}</h1>
-          <Row>
-            <Col style={{ paddingLeft: 24 }}>
+          <Row className="gx-0">
+            <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
               <h2 style={{ textAlign: "center" }}>Schedule</h2>
               <Score sport={sportname} />
             </Col>
@@ -67,10 +73,10 @@ export function SportsPage({ sportname }) {
               <h2 style={{ textAlign: "center" }}>Articles</h2>
               <Articles articles={articles} />
             </Col>
-            <Col style={{ paddingRight: 24 }}>
+            <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
               <h2 style={{ textAlign: "center" }}>Roster</h2>
-              {/* <Player sport={sportname} /> */}
-              {/* <Broadcast /> */}
+              <Player sport={sportname} />
+              {/* /* <Broadcast /> */}
             </Col>
           </Row>
         </div>
