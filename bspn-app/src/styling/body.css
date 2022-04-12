@@ -133,6 +133,26 @@ body {
   }
 }
 
+#roster {
+  text-align: left;
+  
+}
+
+#number {
+  padding-right: 5%;
+  padding-left: 2%;
+  vertical-align: super;
+  font-size: 150%;
+
+}
+
+#position {
+  text-transform: uppercase;
+  font-size: 80%;
+  color: dimgray;
+  
+}
+
 /* .navbar-nav>li, .navbar-nav {
       float: left !important;
   } */
