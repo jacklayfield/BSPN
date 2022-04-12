@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Articles from "../../components/articles";
 import { Score } from "../../components/score";
-import { Player } from "../../components/player";
+// import { Player } from "../../components/player";
 import { Broadcast } from "../../components/broadcast";
 import "../../styling/sportsPageLayout.css";
 
@@ -69,7 +69,7 @@ export function SportsPage({ sportname }) {
             </Col>
             <Col style={{ paddingRight: 24 }}>
               <h2 style={{ textAlign: "center" }}>Roster</h2>
-              <Player sport={sportname} />
+              {/* <Player sport={sportname} /> */}
               {/* <Broadcast /> */}
             </Col>
           </Row>

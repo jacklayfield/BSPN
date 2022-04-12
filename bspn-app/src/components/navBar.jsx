@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { React, useRef } from "react";
 import "../styling/nav.css";
+import { Context } from "../context/context";
+import { useContext } from "react";
 // import { Upload } from "../pages/misc/upload";
 // import { Login } from "../pages/misc/login";
 
@@ -11,6 +13,11 @@ export function NavBar() {
   // const switchNav = () => {
   //   nRef.current.classList.toggle("responsive_nav");
   // };
+
+  const { user, dispatch } = useContext(Context);
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
 
   return (
     <nav
@@ -73,13 +80,12 @@ export function NavBar() {
                   Boys Varsity
                 </a>
               </li>
-              
+
               <li>
                 <a href="/football" className="dropdown-item">
                   Boys JV
                 </a>
               </li>
-              
             </ul>
           </li>
           <li className="nav-item dropdown">
@@ -135,13 +141,12 @@ export function NavBar() {
                   Boys Varsity
                 </a>
               </li>
-              
+
               <li>
                 <a href="/baseball" className="dropdown-item">
                   Boys JV
                 </a>
               </li>
-              
             </ul>
           </li>
           <li className="nav-item active">
@@ -155,7 +160,7 @@ export function NavBar() {
               All Sports
             </a>
           </li>
-          
+          <li onClick={handleLogout}>{user && "Logout"}</li>
         </ul>
       </div>
       <a className="admin nav-link" id="login" href={"/login"}>
