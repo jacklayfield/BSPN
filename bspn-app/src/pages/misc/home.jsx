@@ -23,11 +23,17 @@ export default function Home() {
     fetchArticles();
   }, []);
   return (
-    <div>
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        background: "rgb(227, 227, 227)",
+      }}
+    >
       {loading && <div>Loading</div>}
       {!loading && (
         <div>
-          <h2>BSPN</h2>
+          <h1 className="web-title">BSPN</h1>
           <Line />
           <Feed articles={articles} />
           <Line />

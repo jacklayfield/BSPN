@@ -45,36 +45,15 @@ export function SportsPage({ sportname }) {
       {loading && <div>Loading</div>}
       {!loading && (
         <div>
-          {/* <h2>{sportname}</h2>
-  <Line />
-  <div id="flex" className="row">
-    <div className="second-third">
-      <div id="score-bar">
-        <h2>Recent Scores</h2>
-        <div class="grid-container"></div>
-      </div>
-    </div>
-    <div className="first-third">
-      <h2>Articles</h2>
-    </div>
-    <div className="third-third video">
-      <h2>Latest Broadcasts</h2>
-      <div class="grid-container"></div>
-    </div>
-  </div>
-  <Line /> */}
           <h1 className="web-title">{sportname_capitalized}</h1>
           <Row className="gx-0">
             <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
-              <h2 style={{ textAlign: "center" }}>Schedule</h2>
               <Score sport={sportname} />
             </Col>
             <Col xs={5}>
-              <h2 style={{ textAlign: "center" }}>Articles</h2>
               <Articles articles={articles} />
             </Col>
             <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
-              <h2 style={{ textAlign: "center" }}>Roster</h2>
               <Player sport={sportname} />
               {/* /* <Broadcast /> */}
             </Col>
