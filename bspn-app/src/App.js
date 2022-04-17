@@ -26,7 +26,7 @@ function App() {
           <Route path="/football" element={<Football />} />
           <Route path="/basketball" element={<Basketball />} />
           <Route path="/baseball" element={<Baseball />} />
-          <Route path="/upload" element={<Upload />} />
+          <Route path="/upload" element={user ? <Upload /> : <Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/article/:articleId" element={<ArticlePage />} />
           <Route path="/admin" element={user ? <Upload /> : <Home />} />

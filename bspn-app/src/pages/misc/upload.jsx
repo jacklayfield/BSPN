@@ -44,8 +44,7 @@ export function Upload() {
   return (
     <div>
       <div class="m-5">
-        <h1>Content Upload</h1>
-        {the_sport}
+        <h1>Upload Article</h1>
       </div>
 
       <body>

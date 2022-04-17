@@ -45,7 +45,11 @@ export function SportsPage({ sportname }) {
         background: "rgb(227, 227, 227)",
       }}
     >
-      {loading && <div>Loading</div>}
+      {loading && (
+        <div>
+          <i class="fa-solid fa-spinner fa-2x"></i>
+        </div>
+      )}
       {!loading && (
         <div>
           <h1 className="web-title">{sportname}</h1>
