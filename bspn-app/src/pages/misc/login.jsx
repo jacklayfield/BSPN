@@ -20,6 +20,7 @@ export function Login() {
         password: password_reference.current.value,
       });
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      window.location.replace("/");
     } catch (error) {
       dispatch({ type: "LOGIN_FAILURE" });
     }

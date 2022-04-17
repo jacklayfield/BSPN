@@ -6,6 +6,7 @@ import { Context } from "../context/context";
 import { useContext } from "react";
 // import { Upload } from "../pages/misc/upload";
 // import { Login } from "../pages/misc/login";
+import Button from "react-bootstrap/Button";
 
 export function NavBar() {
   // const nRef = useRef();
@@ -23,6 +24,7 @@ export function NavBar() {
     <nav
       className="navbar navbar-expand-sm navbar-light navbar-fixed-top"
       id="stickyNavbar"
+      style={{ paddingRight: 10 }}
     >
       <a className="navbar-brand mb-0 h1" href="/">
         <img
@@ -160,12 +162,38 @@ export function NavBar() {
               All Sports
             </a>
           </li>
-          <li onClick={handleLogout}>{user && "Logout"}</li>
+          {/* <li onClick={handleLogout}>{user && "Logout"}</li> */}
         </ul>
       </div>
-      <a className="admin nav-link" id="login" href={"/login"}>
-        Admin
-      </a>
+      {user == null && (
+        <Button
+          style={{
+            backgroundColor: "#E9BA46",
+            borderColor: "#daa520",
+            color: "black",
+            fontWeight: 600,
+            fontSize: "1rem",
+          }}
+          href="/login"
+        >
+          Admin
+        </Button>
+      )}
+      {user != null && (
+        <Button
+          type="submit"
+          onClick={handleLogout}
+          style={{
+            backgroundColor: "#E9BA46",
+            borderColor: "#daa520",
+            color: "black",
+            fontWeight: 600,
+            fontSize: "1rem",
+          }}
+        >
+          Logout
+        </Button>
+      )}
     </nav>
 
     //{/*
