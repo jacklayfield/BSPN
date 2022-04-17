@@ -4,9 +4,12 @@
   color: rgb(0, 0, 0);
 }
 .paragraph-text {
-  font-weight: bold;
-  font-family: Helvetica;
+  font-family: "Times New Roman", Times, serif;
   color: rgb(0, 0, 0);
+  word-break: break-word;
+  word-wrap: break-word;
+  max-width: 1500px;
+  white-space: pre-wrap;
 }
 
 .main-body {
