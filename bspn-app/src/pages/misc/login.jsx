@@ -28,7 +28,7 @@ export function Login() {
   return (
     <div>
       <div class="m-5">
-        <h1>Log In</h1>
+        <h1>Admin Log In</h1>
       </div>
 
       <body>

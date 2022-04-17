@@ -164,10 +164,7 @@ export function NavBar() {
         </ul>
       </div>
       <a className="admin nav-link" id="login" href={"/login"}>
-        Log In
-      </a>
-      <a className="admin nav-link" id="upload" href={"/upload"}>
-        Upload
+        Admin
       </a>
     </nav>
 

@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react";
 // import { NavBar } from "../../components/navBar";
 
 export function Upload() {
+  var the_sport = sessionStorage.getItem("sport");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [author, setAuthor] = useState("");
-  const [sport, setSport] = useState("");
+  const [sport, setSport] = useState(the_sport);
   const [file, setFile] = useState(null);
 
   const handleSubmit = async (e) => {
@@ -37,10 +38,14 @@ export function Upload() {
       console.log("error with posting");
     }
   };
+
+  // setSport(the_sport);
+
   return (
     <div>
       <div class="m-5">
         <h1>Content Upload</h1>
+        {the_sport}
       </div>
 
       <body>
@@ -81,13 +86,14 @@ export function Upload() {
             </div>
             <div class="form-group">
               <label for="sport">Sport</label>
-              <input
-                type="text"
-                class="form-control"
-                id="author"
-                placeholder="Enter the sport"
+              <select
+                class="form-select"
                 onChange={(e) => setSport(e.target.value)}
-              />
+              >
+                <option>{the_sport}</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
             </div>
             {/* <div class="form-group">
               <label for="date">

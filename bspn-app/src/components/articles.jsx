@@ -2,7 +2,7 @@ import Article from "../components/article";
 //hi
 
 export default function Articles({ articles }) {
-  const rev_articles = articles.reverse();
+  const rev_articles = articles.slice().reverse();
   return (
     <div>
       {rev_articles.map((a) => (

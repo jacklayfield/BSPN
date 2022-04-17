@@ -7,7 +7,7 @@ export function Hockey() {
   return (
     <div>
       <body>
-        <SportsPage sportname={"hockey"} />
+        <SportsPage sportname={"Hockey"} />
       </body>
     </div>
   );
