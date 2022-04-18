@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import { Context } from "../../context/context";
 import "../../styling/sportsPageLayout.css";
 import { Broadcast } from "../../components/broadcast";
+import Button from "react-bootstrap/Button";
 
 export default function Watch() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,29 @@ export default function Watch() {
           <Row style={{ paddingTop: 20, paddingBottom: 20 }}>
             <Col></Col>
             <Col xs={8}>
+              {user != null && (
+                <div
+                  style={{
+                    padding: 10,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex",
+                  }}
+                >
+                  <Button
+                    style={{
+                      backgroundColor: "#daa520",
+                      borderColor: "#daa520",
+                      color: "black",
+                      fontWeight: 600,
+                      fontSize: "1.5rem",
+                    }}
+                    href="/upload"
+                  >
+                    Change Stream
+                  </Button>
+                </div>
+              )}
               <Broadcast props={streams[1].link.toString()} />
             </Col>
             <Col></Col>

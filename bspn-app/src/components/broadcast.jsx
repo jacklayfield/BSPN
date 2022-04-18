@@ -6,7 +6,8 @@ import { Line } from "../components/line";
 export function Broadcast(stream) {
   var temp = JSON.stringify(stream).split("watch?v=")[1];
   var temp0 = temp.split('"}')[0];
-  var newStream = "https://www.youtube.com/embed/" + temp0;
+  var newStream =
+    "https://www.youtube.com/embed/" + temp0 + "?autoplay=1&mute=1";
 
   // console.log("theid" + id);
   return (
