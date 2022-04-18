@@ -13,6 +13,7 @@ const usersRoute = require("./routes/users");
 const articlesRoute = require("./routes/articles");
 const scoresRoute = require("./routes/scores");
 const rostersRoute = require("./routes/rosters");
+const streamsRoute = require("./routes/streams");
 const multer = require("multer");
 const path = require("path");
 
@@ -54,6 +55,7 @@ app.use("/api/users", usersRoute);
 app.use("/api/articles", articlesRoute);
 app.use("/api/scores", scoresRoute);
 app.use("/api/rosters", rostersRoute);
+app.use("/api/streams", streamsRoute);
 
 // bspnRoutes.route("/").get(function (req, res) {
 //   Score.find(function (err, scores) {

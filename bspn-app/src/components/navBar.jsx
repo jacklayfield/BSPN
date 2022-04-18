@@ -59,9 +59,9 @@ export function NavBar() {
                 fontWeight: "bold",
               }}
               className="nav-link"
-              href="/schedule"
+              href="/watch"
             >
-              Schedule
+              Watch
             </a>
           </li>
           <li className="nav-item dropdown">

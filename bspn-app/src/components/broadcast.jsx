@@ -3,7 +3,12 @@ import "../styling/body.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Line } from "../components/line";
 
-export function Broadcast() {
+export function Broadcast(stream) {
+  var temp = JSON.stringify(stream).split("watch?v=")[1];
+  var temp0 = temp.split('"}')[0];
+  var newStream = "https://www.youtube.com/embed/" + temp0;
+
+  // console.log("theid" + id);
   return (
     <div
       class="grid-item"
@@ -16,17 +21,17 @@ export function Broadcast() {
     >
       <h2
         style={{
-          textAlign: "Left",
+          textAlign: "Center",
           fontSize: 25,
-          position: "relative",
           left: "20px",
           bottom: "-5px",
           fontWeight: "bold",
         }}
       >
-        Latest Broadcasts
+        Live Stream
       </h2>
-      <iframe src="https://www.youtube.com/embed/5qap5aO4i9A/?controls=1"></iframe>
+
+      <iframe width="100%" height="620" src={newStream}></iframe>
     </div>
   );
 }

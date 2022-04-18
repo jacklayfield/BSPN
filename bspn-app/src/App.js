@@ -14,6 +14,7 @@ import { PageLayout } from "./components/pageLayout";
 import ArticlePage from "./pages/misc/articlePage";
 import { useContext } from "react";
 import { Context } from "./context/context";
+import Watch from "./pages/misc/watch";
 
 function App() {
   const { user } = useContext(Context);
@@ -30,6 +31,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/article/:articleId" element={<ArticlePage />} />
           <Route path="/admin" element={user ? <Upload /> : <Home />} />
+          <Route path="/watch" element={<Watch />} />
         </Routes>
       </PageLayout>
     </Router>

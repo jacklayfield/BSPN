@@ -27,7 +27,7 @@ export function Feed({ articles }) {
           <Articles articles={articles} />
         </Col>
         <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
-          <Broadcast />
+          {/* <Broadcast /> */}
         </Col>
       </Row>
     </div>
