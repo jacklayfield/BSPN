@@ -9,17 +9,21 @@ export default function Article({ article }) {
   return (
     <div className="main-body">
       {article.picture && (
-        <img className="postImg" src={image_path + article.picture} alt="" />
+        <img className="articleImg" src={image_path + article.picture} alt="" />
       )}
       <Link to={`/article/${article._id}`}>
-        <span className="postTitle">{article.title}</span>
+        <h2 className="articleTitle" style={{ padding: 5 }}>
+          {article.title}
+        </h2>
       </Link>
       <div id="article-content">
-        <ul className="list-inline">
-          <li className="list-inline-item">By: {article.author}</li>
-          <li className="list-inline-item">Date: ex</li>
-        </ul>
-        <p className="postDesc">{article.description}</p>
+        <div className="infoRow">
+          <div className="inlineL">{article.author}</div>
+          <div className="inlineR">
+            {new Date(article.createdAt).toDateString()}
+          </div>
+        </div>
+        <p className="articleDesc">{article.description}</p>
       </div>
     </div>
   );

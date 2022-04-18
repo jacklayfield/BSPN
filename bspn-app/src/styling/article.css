@@ -17,7 +17,7 @@
   border-radius: 5px;
 }
 
-.postDesc {
+.articleDesc {
   font-size: 14px;
   line-height: 24px;
   margin-top: 15px;
@@ -28,20 +28,47 @@
   -webkit-box-orient: vertical;
 }
 
-.postTitle {
+.articleTitle {
   font-family: Georgia;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 15px;
+  color: black;
+}
+.articleTitleSingle {
+  font-family: Georgia;
+  font-size: 2rem;
+  font-weight: 700;
   color: black;
 }
 a:link {
   text-decoration: none;
 }
 
-.postImg {
+.articleImg {
   height: 350px;
   width: 100%;
   border-radius: 5px;
   object-fit: cover;
+}
+
+.articleImgSingle {
+  height: 550px;
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.infoRow {
+  display: table;
+  width: 100%;
+}
+.inlineR {
+  display: table-cell;
+  text-align: right;
+  color: gray;
+}
+.inlineL {
+  display: table-cell;
+  text-align: left;
+  font-weight: 500;
 }
