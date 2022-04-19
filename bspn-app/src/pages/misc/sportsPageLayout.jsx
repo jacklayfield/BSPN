@@ -55,7 +55,7 @@ export function SportsPage({ sportname }) {
           <h1 className="web-title">{sportname}</h1>
           <Row className="gx-0">
             <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
-              <Score sport={sportname} />
+              <Schedule sport={sportname} />
             </Col>
             <Col xs={5}>
               {user != null && (

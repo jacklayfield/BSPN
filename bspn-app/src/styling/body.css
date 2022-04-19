@@ -32,6 +32,24 @@ body {
   text-align: center;
   align-items: center;
 } */
+thead {
+  vertical-align: middle !important;
+}
+#schedule-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#table-container {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+}
+
 #feed-body {
   background-color: black;
   display: flex;
