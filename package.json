@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "focus-trap-react": "^8.9.2",
     "mongoose": "^6.2.9",
     "react-bootstrap": "^2.2.3"
   }

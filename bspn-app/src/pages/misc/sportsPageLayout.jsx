@@ -14,11 +14,20 @@ import { Broadcast } from "../../components/broadcast";
 import { Context } from "../../context/context";
 import Button from "react-bootstrap/Button";
 import "../../styling/sportsPageLayout.css";
+import { Container } from "../../components/popupContainer";
+import '../../App.css';
+
 
 export function SportsPage({ sportname }) {
   const [loading, setLoading] = useState(true);
   const [articles, setArticles] = useState([]);
   const { user } = useContext(Context);
+
+  
+    
+    
+    //event.preventDefault(event);
+  
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -55,6 +64,18 @@ export function SportsPage({ sportname }) {
           <h1 className="web-title">{sportname}</h1>
           <Row className="gx-0">
             <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
+            {user != null && (
+                <div
+                  style={{
+                    padding: 10,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex",
+                  }}
+                >
+                  <Container triggerText="Upload Game"  />
+                </div>
+              )}
               <Schedule sport={sportname} />
             </Col>
             <Col xs={5}>
@@ -84,6 +105,18 @@ export function SportsPage({ sportname }) {
               <Articles articles={articles} />
             </Col>
             <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
+            {user != null && (
+                <div
+                  style={{
+                    padding: 10,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex",
+                  }}
+                >
+                  <Container triggerText="Upload Player"/>
+                </div>
+              )}
               <Player sport={sportname} />
               {/* /* <Broadcast /> */}
             </Col>

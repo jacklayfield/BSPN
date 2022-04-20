@@ -33,7 +33,7 @@ export function Upload() {
     }
     try {
       const res = await axios.post("/articles", newPost);
-      window.location.replace("/");
+      window.location.replace("/" + the_sport);
     } catch (error) {
       console.log("error with posting");
     }
