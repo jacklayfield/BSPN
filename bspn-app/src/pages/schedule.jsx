@@ -34,7 +34,25 @@ export function Schedule({ sport }) {
   sessionStorage.setItem("sport", sport);
   if (scores.length !== 0) {
     return (
-      <body>
+      <div
+        style={{
+          backgroundColor: "white",
+          borderRadius: "25px",
+          border: "5px solid",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "Left",
+            fontSize: 25,
+            position: "relative",
+            left: "20px",
+            bottom: "-5px",
+            fontWeight: "bold",
+          }}
+        >
+          Schedule
+        </h2>
         <table id="tasks" class="table table-hover">
           <thead>
             <tr>
@@ -50,11 +68,29 @@ export function Schedule({ sport }) {
             ))}
           </tbody>
         </table>
-      </body>
+      </div>
     );
   } else {
     return (
-      <body>
+      <div
+        style={{
+          backgroundColor: "white",
+          borderRadius: "25px",
+          border: "5px solid",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "Left",
+            fontSize: 25,
+            position: "relative",
+            left: "20px",
+            bottom: "-5px",
+            fontWeight: "bold",
+          }}
+        >
+          Schedule
+        </h2>
         <table id="tasks" class="table table-hover">
           <thead>
             <tr>
@@ -66,7 +102,7 @@ export function Schedule({ sport }) {
           </thead>
           <tbody></tbody>
         </table>
-      </body>
+      </div>
     );
   }
 }

@@ -9,7 +9,7 @@ export default function SingleEvent({ score }) {
       <td class="text-center">{score.time}</td>
       <td class="text-center">{score.team2}</td>
       <td class="text-center">
-        {score.score1} : {score.score2}
+        {score.score1}-{score.score2}
       </td>
     </tr>
   );
