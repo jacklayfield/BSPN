@@ -3,10 +3,13 @@ import axios from "axios";
 import "../styling/body.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Line } from "./line";
+import { useContext } from "react";
+import { Context } from "../context/context";
 
 export function Player({ sport }) {
   const [loading, setLoading] = useState(true);
   const [players, setPlayers] = useState([]);
+  const { user } = useContext(Context);
 
   useEffect(() => {
     const fetchPlayers = async () => {
@@ -59,6 +62,20 @@ export function Player({ sport }) {
                 <li class="list-inline-item">
                   <i class="bi bi-arrow-right-short"></i>
                 </li>
+
+                {user != null && <li class="list-inline-item">
+                  <button className="btn btn-danger btn-sm" type="submit" onClick={async function() {
+                    try {
+                      const res = await axios.delete("rosters/" + a._id);
+                      window.location.replace("/" + a.sport);
+                    } catch (error) {
+                      console.log("error with posting");
+                    }
+                  }}>
+                    <i class="fa-solid fa-trash-can"></i>
+                  </button>
+                </li>
+  }
               </ul>
             </h5>
           </div>

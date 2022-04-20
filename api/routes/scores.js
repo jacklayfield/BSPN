@@ -39,8 +39,8 @@ router.delete("/:id", async (req, res) => {
   try {
     const score = await Score.findById(req.params.id);
     try {
-      await post.delete();
-      res.status(200).json("Post deleted");
+      await score.delete();
+      res.status(200).json("Score deleted");
     } catch (error) {
       res.status(500).json(error);
     }
