@@ -109,7 +109,7 @@ export function NavBar() {
                 </a>
               </li>
               <li>
-                <a href="/basketball" className="dropdown-item">
+                <a href="/gvbasketball" className="dropdown-item">
                   Girls Varisity
                 </a>
               </li>
@@ -170,7 +170,7 @@ export function NavBar() {
                 </a>
               </li>
               <li>
-                <a href="/soccer" className="dropdown-item">
+                <a href="/gvsoccer" className="dropdown-item">
                   Girls Varisity
                 </a>
               </li>
