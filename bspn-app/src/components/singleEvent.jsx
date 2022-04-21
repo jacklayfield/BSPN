@@ -14,6 +14,15 @@ const del = async (event, score) => {
   }
 }
 
+function scoreOutput(score) {
+  if (score.score1 != "") {
+    return score.score1 + "-" +  score.score2;
+  }
+  else {
+    return "";
+  }
+}
+
 export default function SingleEvent({ score }) {
   const { user } = useContext(Context);
   return (
@@ -22,7 +31,7 @@ export default function SingleEvent({ score }) {
       <td class="text-center">{score.time}</td>
       <td class="text-center">{score.team2}</td>
       <td class="text-center">
-        {score.score1}-{score.score2}
+        {scoreOutput(score)}
       </td>
       <td class="text-center">
       {user != null && <button className="btn btn-danger btn-sm" type="submit" onClick={async function() {
