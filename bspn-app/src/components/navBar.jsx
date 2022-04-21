@@ -78,7 +78,7 @@ export function NavBar() {
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a href="/football" className="dropdown-item">
+                <a href="/bvfootball" className="dropdown-item">
                   Boys Varsity
                 </a>
               </li>
@@ -104,7 +104,7 @@ export function NavBar() {
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a href="/basketball" className="dropdown-item">
+                <a href="/bvbasketball" className="dropdown-item">
                   Boys Varsity
                 </a>
               </li>
@@ -139,7 +139,7 @@ export function NavBar() {
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a href="/baseball" className="dropdown-item">
+                <a href="/bvbaseball" className="dropdown-item">
                   Boys Varsity
                 </a>
               </li>
@@ -165,7 +165,7 @@ export function NavBar() {
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a href="/soccer" className="dropdown-item">
+                <a href="/bvsoccer" className="dropdown-item">
                   Boys Varsity
                 </a>
               </li>
@@ -203,90 +203,90 @@ export function NavBar() {
                 <div style={{minWidth: 200}} class="col-sm-1"> 
                   <h5>Boys Varsity</h5>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvbaseball" className="dropdown-item">
                       Baseball
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvbasketball" className="dropdown-item">
                       Basketball
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvcrosscountry" className="dropdown-item">
                       Cross Country
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/filmfestival" className="dropdown-item">
                       Film Festival
                     </a>
                   </li>
 
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvfootball" className="dropdown-item">
                       Football
                     </a>
                   </li>
 
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/forensics" className="dropdown-item">
                       Forensics
                     </a>
                   </li>
 
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/golf" className="dropdown-item">
                       Golf
                     </a>
                   </li>
 
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvintrack" className="dropdown-item">
                       Indoor Track
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvouttrack" className="dropdown-item">
                       Outdoor Track
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/scholasticbowl" className="dropdown-item">
                       Scholastic Bowl
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvsoccer" className="dropdown-item">
                       Soccer
                     </a>
                   </li>
                   
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvsd" className="dropdown-item">
                       Swim and Dive
                     </a>
                   </li>
                  
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/bvtennis" className="dropdown-item">
                       Tennis
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/theater" className="dropdown-item">
                       Theater
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/wrestling" className="dropdown-item">
                       Wrestling
                     </a>
                   </li>
@@ -295,80 +295,80 @@ export function NavBar() {
                   <h5>Girls Varsity</h5>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/gvbasketball" className="dropdown-item">
                       Basketball
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/cheer" className="dropdown-item">
                       Cheer
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/gxc" className="dropdown-item">
                       Cross Country
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/filmfestival" className="dropdown-item">
                       Film Festival
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/forensics" className="dropdown-item">
                       Forensics
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/git" className="dropdown-item">
                       Indoor Track
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/got" className="dropdown-item">
                       Outdoor Track
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/scholasticbowl" className="dropdown-item">
                       Scholastic Bowl
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/gvsoccer" className="dropdown-item">
                       Soccer
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/gvsoftball" className="dropdown-item">
                       Softball
                     </a>
                   </li>
                  
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/gvsd" className="dropdown-item">
                       Swim and Dive
                     </a>
                   </li>
                   
                   
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/gvtennis" className="dropdown-item">
                       Tennis
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/theater" className="dropdown-item">
                       Theater
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="dropdown-item">
+                    <a href="/gvvb" className="dropdown-item">
                       Volleyball
                     </a>
                   </li>
