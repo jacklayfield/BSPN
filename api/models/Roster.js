@@ -11,7 +11,7 @@ const RosterSchema = new mongoose.Schema(
       required: true,
     },
     number: {
-      type: String,
+      type: Number,
       required: true,
     },
     position: {

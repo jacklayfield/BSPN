@@ -51,7 +51,7 @@ router.delete("/:id", async (req, res) => {
 
 router.get("/sport=:sport", async (req, res) => {
   try {
-    const score = await Score.find({ sport: { $regex: req.params.sport } });
+    const score = await Score.find({ sport: { $regex: req.params.sport } }).sort({date:1});
     res.status(200).json(score);
   } catch (error) {
     res.status(500).json(error);
@@ -70,14 +70,11 @@ router.get("/id=:id", async (req, res) => {
 
 //GET ALL SCORES
 router.get("/", async (req, res) => {
-  const username = req.query.user;
   try {
     let scores;
-    if (username) {
-      scores = await Score.find({ author: username });
-    } else {
-      scores = await Score.find();
-    }
+
+    scores = await Score.find().sort({date:1});
+    
     res.status(200).json(scores);
   } catch (error) {
     res.status(500).json(error);

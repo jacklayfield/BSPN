@@ -161,192 +161,241 @@ export function NavBar() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Varsity Sports
+              All Sports
             </a>
-            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <a href="/" className="dropdown-item">
-                  Baseball
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Basketball - Men
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Basketball - Women
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Cheer
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Cross Country - Men
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Cross Country - Women
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Film Festival
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Football
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Forensics
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Golf
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Indoor Track - Men
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Indoor Track - Women
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Outdoor Track - Men
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Outdoor Track - Women
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Scholastic Bowl
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Soccer - Men
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Soccer - Women
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Softball
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Swim and Dive - Men
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Swim and Dive - Women
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Swimming - Men
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Tennis - Men
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Tennis - Women
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Theater
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Volleyball
-                </a>
-              </li>
-              <li>
-                <a href="/" className="dropdown-item">
-                  Wrestling
-                </a>
-              </li>
+            <ul style={{minWidth: 800}} className="dropdown-menu multi-column columns-5" aria-labelledby="navbarDropdown">
+              <div class="row">
+                <div style={{minWidth: 200}} class="col-sm-1"> 
+                  <h5>Boys Varsity</h5>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Baseball
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Basketball
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Cross Country
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Film Festival
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Football
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Forensics
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Golf
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Indoor Track
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Outdoor Track
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Scholastic Bowl
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Soccer
+                    </a>
+                  </li>
+                  
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Swim and Dive
+                    </a>
+                  </li>
+                 
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Tennis
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Theater
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Wrestling
+                    </a>
+                  </li>
+                </div>
+                <div style={{minWidth: 200}} class="col-sm-1"> 
+                  <h5>Girls Varsity</h5>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Basketball
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Cheer
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Cross Country
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Film Festival
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Forensics
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Indoor Track
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Outdoor Track
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Scholastic Bowl
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Soccer
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Softball
+                    </a>
+                  </li>
+                 
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Swim and Dive
+                    </a>
+                  </li>
+                  
+                  
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Tennis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Theater
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Volleyball
+                    </a>
+                  </li>
+                 
+                </div>
+                <div style={{minWidth: 200}} class="col-sm-1"> 
+                  <h5>Boys JV</h5>
+                  <li>
+                    <a href="/basketball" className="dropdown-item">
+                      Baseball
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/basketball" className="dropdown-item">
+                      Basketball
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/basketball" className="dropdown-item">
+                      Football
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/basketball" className="dropdown-item">
+                      Soccer
+                    </a>
+                  </li>
+
+                </div>
+                <div style={{minWidth: 200}} class="col-sm-1"> 
+                  <h5>Girls JV</h5>
+                  
+                
+                  <li>
+                    <a href="/basketball" className="dropdown-item">
+                      Basketball
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/basketball" className="dropdown-item">
+                      Soccer
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/basketball" className="dropdown-item">
+                      Softball
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/basketball" className="dropdown-item">
+                      Volleyball
+                    </a>
+                  </li>
+                </div>
+              </div>
             </ul>
+
+            
           </li>
 
-          <li className="nav-item dropdown">
-            <a
-              href="/"
-              style={{ fontWeight: "bold" }}
-              className="nav-link dropdown-toggle"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              JV Sports
-            </a>
-            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <a href="/basketball" className="dropdown-item">
-                  Baseball
-                </a>
-              </li>
-              <li>
-                <a href="/basketball" className="dropdown-item">
-                  Basketball - Men
-                </a>
-              </li>
-              <li>
-                <a href="/basketball" className="dropdown-item">
-                  Basketball - Women
-                </a>
-              </li>
-              <li>
-                <a href="/basketball" className="dropdown-item">
-                  Football
-                </a>
-              </li>
-              <li>
-                <a href="/basketball" className="dropdown-item">
-                  Soccer
-                </a>
-              </li>
-              <li>
-                <a href="/basketball" className="dropdown-item">
-                  Softball
-                </a>
-              </li>
-              <li>
-                <a href="/basketball" className="dropdown-item">
-                  Volleyball
-                </a>
-              </li>
-            </ul>
-          </li>
 
           {/* <li onClick={handleLogout}>{user && "Logout"}</li> */}
         </ul>
@@ -398,3 +447,189 @@ export function NavBar() {
     //</header> */}
   );
 }
+
+/*
+<li>
+                    <a href="/" className="dropdown-item">
+                      Baseball
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Basketball - Men
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Basketball - Women
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Cheer
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Cross Country - Men
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Cross Country - Women
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Film Festival
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Football
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Forensics
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Golf
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Indoor Track - Men
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Indoor Track - Women
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Outdoor Track - Men
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Outdoor Track - Women
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Scholastic Bowl
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Soccer - Men
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Soccer - Women
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Softball
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Swim and Dive - Men
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Swim and Dive - Women
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Swimming - Men
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Tennis - Men
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Tennis - Women
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Theater
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Volleyball
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="dropdown-item">
+                      Wrestling
+                    </a>
+                  </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <li>
+                <a href="/basketball" className="dropdown-item">
+                  Baseball
+                </a>
+              </li>
+              <li>
+                <a href="/basketball" className="dropdown-item">
+                  Basketball - Men
+                </a>
+              </li>
+              <li>
+                <a href="/basketball" className="dropdown-item">
+                  Basketball - Women
+                </a>
+              </li>
+              <li>
+                <a href="/basketball" className="dropdown-item">
+                  Football
+                </a>
+              </li>
+              <li>
+                <a href="/basketball" className="dropdown-item">
+                  Soccer
+                </a>
+              </li>
+              <li>
+                <a href="/basketball" className="dropdown-item">
+                  Softball
+                </a>
+              </li>
+              <li>
+                <a href="/basketball" className="dropdown-item">
+                  Volleyball
+                </a>
+              </li>
+                  */

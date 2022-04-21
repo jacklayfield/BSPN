@@ -18,7 +18,7 @@ export default function SingleEvent({ score }) {
   const { user } = useContext(Context);
   return (
     <tr>
-      <td class="text-center">{score.date}</td>
+      <td class="text-center">{new Date(score.date).toDateString()}</td>
       <td class="text-center">{score.time}</td>
       <td class="text-center">{score.team2}</td>
       <td class="text-center">

@@ -51,7 +51,7 @@ router.delete("/:id", async (req, res) => {
 
 router.get("/sport=:sport", async (req, res) => {
   try {
-    const roster = await Roster.find({ sport: { $regex: req.params.sport } });
+    const roster = await Roster.find({ sport: { $regex: req.params.sport } }).sort({number:1});
     res.status(200).json(roster);
   } catch (error) {
     res.status(500).json(error);

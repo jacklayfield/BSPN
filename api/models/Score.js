@@ -23,7 +23,7 @@ const ScoreSchema = new mongoose.Schema(
       required: false,
     },
     date: {
-      type: String,
+      type: Date,
       required: true,
     },
     time: {
