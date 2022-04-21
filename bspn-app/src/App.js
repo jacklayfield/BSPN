@@ -31,6 +31,15 @@ import { GVSD } from "./pages/sports-pages/GirlsVarsity/gvsd";
 import { GVVB } from "./pages/sports-pages/GirlsVarsity/gvvb";
 import { GVTennis } from "./pages/sports-pages/GirlsVarsity/gvtennis";
 
+import { BJVBaseball } from "./pages/sports-pages/BoysJV/BJVBaseball";
+import { BJVBasketball } from "./pages/sports-pages/BoysJV/BJVBasket";
+import { BJVFootball } from "./pages/sports-pages/BoysJV/BJVFootball";
+import { BJVSoccer } from "./pages/sports-pages/BoysJV/BJVSoccer";
+import { GJVBasketball } from "./pages/sports-pages/GirlsJV/GJVBasketball";
+import { GJVSoccer } from "./pages/sports-pages/GirlsJV/GJVSoccer";
+import { GJVSoftball } from "./pages/sports-pages/GirlsJV/GJVSoftball";
+import { GJVVolleyball } from "./pages/sports-pages/GirlsJV/GJVVolleyball";
+
 import { Upload } from "./pages/misc/upload";
 import { Login } from "./pages/misc/login";
 import { PageLayout } from "./components/pageLayout";
@@ -72,6 +81,16 @@ function App() {
           <Route path="/gvsd" element={<GVSD />} />
           <Route path="/gvtennis" element={<GVTennis />} />
           <Route path="/gvvb" element={<GVVB />} />
+
+          <Route path="/bjvbaseball" element={<BJVBaseball />} />
+          <Route path="/bjvbasketball" element={<BJVBasketball />} />
+          <Route path="/bjvfootball" element={<BJVFootball />} />
+          <Route path="/bjvsoccer" element={<BJVSoccer />} />
+
+          <Route path="/gjvbasketball" element={<GJVBasketball />} />
+          <Route path="/gjvsoccer" element={<GJVSoccer />} />
+          <Route path="/gjvsoftball" element={<GJVSoftball />} />
+          <Route path="/gjvvolleyball" element={<GJVVolleyball />} />
 
           <Route path="/upload" element={user ? <Upload /> : <Home />} />
           <Route path="/login" element={<Login />} />

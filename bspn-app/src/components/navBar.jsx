@@ -84,7 +84,7 @@ export function NavBar() {
               </li>
 
               <li>
-                <a href="/football" className="dropdown-item">
+                <a href="/bjvfootball" className="dropdown-item">
                   Boys JV
                 </a>
               </li>
@@ -114,12 +114,12 @@ export function NavBar() {
                 </a>
               </li>
               <li>
-                <a href="/basketball" className="dropdown-item">
+                <a href="/bjvbasketball" className="dropdown-item">
                   Boys JV
                 </a>
               </li>
               <li>
-                <a href="/basketball" className="dropdown-item">
+                <a href="/gjvbasketball" className="dropdown-item">
                   Girls JV
                 </a>
               </li>
@@ -145,7 +145,7 @@ export function NavBar() {
               </li>
 
               <li>
-                <a href="/baseball" className="dropdown-item">
+                <a href="/bjvbaseball" className="dropdown-item">
                   Boys JV
                 </a>
               </li>
@@ -175,12 +175,12 @@ export function NavBar() {
                 </a>
               </li>
               <li>
-                <a href="/soccer" className="dropdown-item">
+                <a href="/bjvsoccer" className="dropdown-item">
                   Boys JV
                 </a>
               </li>
               <li>
-                <a href="/soccer" className="dropdown-item">
+                <a href="/gjvsoccer" className="dropdown-item">
                   Girls JV
                 </a>
               </li>
@@ -198,9 +198,13 @@ export function NavBar() {
             >
               All Sports
             </a>
-            <ul style={{minWidth: 800}} className="dropdown-menu multi-column columns-5" aria-labelledby="navbarDropdown">
+            <ul
+              style={{ minWidth: 800 }}
+              className="dropdown-menu multi-column columns-5"
+              aria-labelledby="navbarDropdown"
+            >
               <div class="row">
-                <div style={{minWidth: 200}} class="col-sm-1"> 
+                <div style={{ minWidth: 200 }} class="col-sm-1">
                   <h5>Boys Varsity</h5>
                   <li>
                     <a href="/bvbaseball" className="dropdown-item">
@@ -212,13 +216,13 @@ export function NavBar() {
                       Basketball
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/bvcrosscountry" className="dropdown-item">
                       Cross Country
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/filmfestival" className="dropdown-item">
                       Film Festival
@@ -248,13 +252,13 @@ export function NavBar() {
                       Indoor Track
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/bvouttrack" className="dropdown-item">
                       Outdoor Track
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/scholasticbowl" className="dropdown-item">
                       Scholastic Bowl
@@ -265,35 +269,34 @@ export function NavBar() {
                       Soccer
                     </a>
                   </li>
-                  
-                  
+
                   <li>
                     <a href="/bvsd" className="dropdown-item">
                       Swim and Dive
                     </a>
                   </li>
-                 
+
                   <li>
                     <a href="/bvtennis" className="dropdown-item">
                       Tennis
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/theater" className="dropdown-item">
                       Theater
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/wrestling" className="dropdown-item">
                       Wrestling
                     </a>
                   </li>
                 </div>
-                <div style={{minWidth: 200}} class="col-sm-1"> 
+                <div style={{ minWidth: 200 }} class="col-sm-1">
                   <h5>Girls Varsity</h5>
-                  
+
                   <li>
                     <a href="/gvbasketball" className="dropdown-item">
                       Basketball
@@ -304,7 +307,7 @@ export function NavBar() {
                       Cheer
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/gxc" className="dropdown-item">
                       Cross Country
@@ -315,19 +318,19 @@ export function NavBar() {
                       Film Festival
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/forensics" className="dropdown-item">
                       Forensics
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/git" className="dropdown-item">
                       Indoor Track
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/got" className="dropdown-item">
                       Outdoor Track
@@ -338,7 +341,7 @@ export function NavBar() {
                       Scholastic Bowl
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="/gvsoccer" className="dropdown-item">
                       Soccer
@@ -349,14 +352,13 @@ export function NavBar() {
                       Softball
                     </a>
                   </li>
-                 
+
                   <li>
                     <a href="/gvsd" className="dropdown-item">
                       Swim and Dive
                     </a>
                   </li>
-                  
-                  
+
                   <li>
                     <a href="/gvtennis" className="dropdown-item">
                       Tennis
@@ -372,65 +374,59 @@ export function NavBar() {
                       Volleyball
                     </a>
                   </li>
-                 
                 </div>
-                <div style={{minWidth: 200}} class="col-sm-1"> 
+                <div style={{ minWidth: 200 }} class="col-sm-1">
                   <h5>Boys JV</h5>
                   <li>
-                    <a href="/basketball" className="dropdown-item">
+                    <a href="/bjvbaseball" className="dropdown-item">
                       Baseball
                     </a>
                   </li>
                   <li>
-                    <a href="/basketball" className="dropdown-item">
+                    <a href="/bjvbasketball" className="dropdown-item">
                       Basketball
                     </a>
                   </li>
-                  
+
                   <li>
-                    <a href="/basketball" className="dropdown-item">
+                    <a href="/bjvfootball" className="dropdown-item">
                       Football
                     </a>
                   </li>
                   <li>
-                    <a href="/basketball" className="dropdown-item">
+                    <a href="/bjvsoccer" className="dropdown-item">
                       Soccer
                     </a>
                   </li>
-
                 </div>
-                <div style={{minWidth: 200}} class="col-sm-1"> 
+                <div style={{ minWidth: 200 }} class="col-sm-1">
                   <h5>Girls JV</h5>
-                  
-                
+
                   <li>
-                    <a href="/basketball" className="dropdown-item">
+                    <a href="/gjvbasketball" className="dropdown-item">
                       Basketball
                     </a>
                   </li>
-                  
+
                   <li>
-                    <a href="/basketball" className="dropdown-item">
+                    <a href="/gjvsoccer" className="dropdown-item">
                       Soccer
                     </a>
                   </li>
                   <li>
-                    <a href="/basketball" className="dropdown-item">
+                    <a href="/gjvsoftball" className="dropdown-item">
                       Softball
                     </a>
                   </li>
                   <li>
-                    <a href="/basketball" className="dropdown-item">
+                    <a href="/gjvvolleyball" className="dropdown-item">
                       Volleyball
                     </a>
                   </li>
                 </div>
               </div>
             </ul>
-
-            
           </li>
-
 
           {/* <li onClick={handleLogout}>{user && "Logout"}</li> */}
         </ul>
