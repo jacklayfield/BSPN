@@ -1,29 +1,30 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 export function PlayerForm() {
+  var the_sport = sessionStorage.getItem("sport");
+  const [name, setName] = useState("");
+  const [number, setNum] = useState("");
+  const [position, setPos] = useState("");
 
-    var the_sport = sessionStorage.getItem("sport");
-    const [name, setName] = useState("");
-    const [number, setNum] = useState("");
-    const [position, setPos] = useState("");
+  var cur_url = window.location.href;
 
-    const onSubmit = async (event) => {
-      event.preventDefault();
-      const newPlayer = {
-        sport:the_sport,
-        name,
-        number,
-        position
-      };
-      try {
-        const res = await axios.post("/rosters", newPlayer);
-        window.location.replace("/" + the_sport);
-      } catch (error) {
-        console.log("error with posting");
-      }
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const newPlayer = {
+      sport: the_sport,
+      name,
+      number,
+      position,
+    };
+    try {
+      const res = await axios.post("/rosters", newPlayer);
+      window.location.replace(cur_url);
+    } catch (error) {
+      console.log("error with posting");
     }
+  };
 
   return (
     <form onSubmit={onSubmit}>
@@ -32,9 +33,13 @@ export function PlayerForm() {
       </div>
       <div className="form-group">
         <label htmlFor="name">Name</label>
-        <input className="form-control" id="name inputdefault" onChange={(e) => setName(e.target.value)}/>
+        <input
+          className="form-control"
+          id="name inputdefault"
+          onChange={(e) => setName(e.target.value)}
+        />
       </div>
-      <div className="form-group" >
+      <div className="form-group">
         <label htmlFor="number">Number</label>
         <input
           className="form-control"
@@ -50,13 +55,13 @@ export function PlayerForm() {
           onChange={(e) => setPos(e.target.value)}
         />
       </div>
-      
-      <div className="form-group" style={{padding:10,}}>
+
+      <div className="form-group" style={{ padding: 10 }}>
         <button className="form-control btn btn-primary" type="submit">
           Submit
         </button>
       </div>
     </form>
   );
-};
+}
 export default PlayerForm;

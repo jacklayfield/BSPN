@@ -3,7 +3,7 @@ import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/misc/home";
-import { Schedule } from "./pages/schedule";
+import { Schedule } from "./components/schedule";
 
 import { BVFootball } from "./pages/sports-pages/BoysVarsity/bvfootball";
 import { BVBasketball } from "./pages/sports-pages/BoysVarsity/bvbasketball";
@@ -30,7 +30,6 @@ import { GVSoccer } from "./pages/sports-pages/GirlsVarsity/gvsoccer";
 import { GVSD } from "./pages/sports-pages/GirlsVarsity/gvsd";
 import { GVVB } from "./pages/sports-pages/GirlsVarsity/gvvb";
 import { GVTennis } from "./pages/sports-pages/GirlsVarsity/gvtennis";
-
 
 import { Upload } from "./pages/misc/upload";
 import { Login } from "./pages/misc/login";

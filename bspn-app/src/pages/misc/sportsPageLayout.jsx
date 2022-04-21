@@ -4,7 +4,7 @@ import { useContext } from "react";
 import axios from "axios";
 // import Articles from "../../components/articles";
 import { Line } from "../../components/line";
-import { Schedule } from "../schedule";
+import { Schedule } from "../../components/schedule";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Articles from "../../components/articles";
@@ -15,23 +15,22 @@ import { Context } from "../../context/context";
 import Button from "react-bootstrap/Button";
 import "../../styling/sportsPageLayout.css";
 import { Container } from "../../components/popupContainer";
-import '../../App.css';
-
+import "../../App.css";
 
 export function SportsPage({ sportname }) {
-  const [loading, setLoading] = useState(true);
+  const [loadingArticles, setLoadingArticles] = useState(true);
+  const [loadingScores, setLoadingScores] = useState(true);
+  const [loadingPlayers, setLoadingPlayers] = useState(true);
   const [articles, setArticles] = useState([]);
+  const [scores, setScores] = useState([]);
+  const [players, setPlayers] = useState([]);
   const { user } = useContext(Context);
 
-  
-    
-    
-    //event.preventDefault(event);
-  
+  //event.preventDefault(event);
 
   useEffect(() => {
     const fetchArticles = async () => {
-      setLoading(true);
+      setLoadingArticles(true);
       try {
         const res = await axios.get("/articles/sport=" + sportname);
         console.log(res);
@@ -39,9 +38,38 @@ export function SportsPage({ sportname }) {
       } catch (error) {
         console.log(error);
       }
-      setLoading(false);
+      setLoadingArticles(false);
     };
+    const fetchScores = async () => {
+      setLoadingScores(true);
+      try {
+        const res = await axios.get("/scores/sport=" + sportname);
+
+        setScores(res.data);
+        if (sportname.length === 0) {
+          const res1 = await axios.get("/scores");
+
+          setScores(res1.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+      setLoadingScores(false);
+    };
+    const fetchPlayers = async () => {
+      setLoadingPlayers(true);
+      try {
+        const res = await axios.get("/rosters/sport=" + sportname);
+        setPlayers(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+      setLoadingPlayers(false);
+    };
+
     fetchArticles();
+    fetchScores();
+    fetchPlayers();
   }, []);
 
   sessionStorage.setItem("sport", sportname);
@@ -54,17 +82,17 @@ export function SportsPage({ sportname }) {
         background: "rgb(227, 227, 227)",
       }}
     >
-      {loading && (
+      {loadingArticles && loadingScores && loadingPlayers && (
         <div>
           <i class="fa-solid fa-spinner fa-2x"></i>
         </div>
       )}
-      {!loading && (
+      {!loadingArticles && !loadingScores && !loadingPlayers && (
         <div>
           <h1 className="web-title">{sportname}</h1>
           <Row className="gx-0">
             <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
-            {user != null && (
+              {user != null && (
                 <div
                   style={{
                     padding: 10,
@@ -73,10 +101,10 @@ export function SportsPage({ sportname }) {
                     display: "flex",
                   }}
                 >
-                  <Container triggerText="Upload Game"  />
+                  <Container triggerText="Upload Game" />
                 </div>
               )}
-              <Schedule sport={sportname} />
+              <Schedule scores={scores} />
             </Col>
             <Col xs={5}>
               {user != null && (
@@ -105,7 +133,7 @@ export function SportsPage({ sportname }) {
               <Articles articles={articles} />
             </Col>
             <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
-            {user != null && (
+              {user != null && (
                 <div
                   style={{
                     padding: 10,
@@ -114,10 +142,10 @@ export function SportsPage({ sportname }) {
                     display: "flex",
                   }}
                 >
-                  <Container triggerText="Upload Player"/>
+                  <Container triggerText="Upload Player" />
                 </div>
               )}
-              <Player sport={sportname} />
+              <Player players={players} />
               {/* /* <Broadcast /> */}
             </Col>
           </Row>

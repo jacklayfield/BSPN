@@ -45,7 +45,7 @@ export default function Watch() {
       )}
       {!loading && (
         <div>
-          <Row style={{ paddingTop: 20, paddingBottom: 20 }}>
+          <Row className="gx-0" style={{ paddingTop: 20, paddingBottom: 20 }}>
             <Col></Col>
             <Col xs={8}>
               {user != null && (

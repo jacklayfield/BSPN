@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -10,24 +10,27 @@ export function Form() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
 
+  var cur_url = window.location.href;
+  // var sport_route = cur_url.split("/")[1];
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const newScore = {
-      sport:the_sport,
-      team1:'Radford HS',
+      sport: the_sport,
+      team1: "Radford HS",
       team2,
       score1,
       score2,
       date,
-      time
+      time,
     };
     try {
       const res = await axios.post("/scores", newScore);
-      window.location.replace("/" + the_sport);
+      window.location.replace(cur_url);
     } catch (error) {
       console.log("error with posting");
     }
-  }
+  };
 
   return (
     <form onSubmit={onSubmit}>
@@ -36,8 +39,11 @@ export function Form() {
       </div>
       <div className="form-group">
         <label htmlFor="opponent">Opponent</label>
-        <input className="form-control" id="opponent inputdefault" onChange={(e) => setTeam2(e.target.value)}/>
-        
+        <input
+          className="form-control"
+          id="opponent inputdefault"
+          onChange={(e) => setTeam2(e.target.value)}
+        />
       </div>
       <div className="form-group">
         <label htmlFor="date">Date</label>
@@ -71,7 +77,7 @@ export function Form() {
           onChange={(e) => setScore2(e.target.value)}
         />
       </div>
-      <div className="form-group" style={{padding:10,}}>
+      <div className="form-group" style={{ padding: 10 }}>
         <button className="form-control btn btn-primary" type="submit">
           Submit
         </button>
