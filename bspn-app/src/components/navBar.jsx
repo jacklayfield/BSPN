@@ -161,6 +161,41 @@ export function NavBar() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
+              Soccer
+            </a>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a href="/soccer" className="dropdown-item">
+                  Boys Varsity
+                </a>
+              </li>
+              <li>
+                <a href="/soccer" className="dropdown-item">
+                  Girls Varisity
+                </a>
+              </li>
+              <li>
+                <a href="/soccer" className="dropdown-item">
+                  Boys JV
+                </a>
+              </li>
+              <li>
+                <a href="/soccer" className="dropdown-item">
+                  Girls JV
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li className="nav-item dropdown">
+            <a
+              href="/"
+              style={{ fontWeight: "bold" }}
+              className="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               All Sports
             </a>
             <ul style={{minWidth: 800}} className="dropdown-menu multi-column columns-5" aria-labelledby="navbarDropdown">
