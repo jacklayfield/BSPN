@@ -2,6 +2,7 @@
   "dependencies": {
     "focus-trap-react": "^8.9.2",
     "mongoose": "^6.2.9",
-    "react-bootstrap": "^2.2.3"
+    "react-bootstrap": "^2.2.3",
+    "react-datepicker": "^4.7.0"
   }
 }
