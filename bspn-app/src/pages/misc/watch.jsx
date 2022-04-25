@@ -87,7 +87,7 @@ export default function Watch() {
                         type="text"
                         class="form-control"
                         style={{ width: 350 }}
-                        value={streams.link}
+                        value={link}
                         onChange={(e) => setLink(e.target.value)}
                       />
                     </div>
