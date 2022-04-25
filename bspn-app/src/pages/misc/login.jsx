@@ -57,7 +57,6 @@ export function Login() {
             </div>
           </div>
           <div class="modal-footer">
-            <a href="/login">Forgot Password</a>
             <button
               type="submit"
               class="btn btn-success btn-default pull-left"
