@@ -7,7 +7,9 @@ import { Line } from "../../components/line";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [loadingAds, setLoadingAds] = useState(true);
   const [articles, setArticles] = useState([]);
+  const [ads, setAds] = useState([]);
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -21,6 +23,18 @@ export default function Home() {
       setLoading(false);
     };
     fetchArticles();
+
+    const fetchAds = async () => {
+      setLoadingAds(true);
+      try {
+        const res = await axios.get("/ads");
+        setAds(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+      setLoadingAds(false);
+    };
+    fetchAds();
   }, []);
   return (
     <div
@@ -31,10 +45,10 @@ export default function Home() {
       }}
     >
       {loading && <div>Loading</div>}
-      {!loading && (
+      {!loading && !loadingAds && (
         <div>
           <h1 className="web-title">BSPN</h1>
-          <Feed articles={articles} />
+          <Feed articles={articles} ads={ads} />
         </div>
       )}
     </div>

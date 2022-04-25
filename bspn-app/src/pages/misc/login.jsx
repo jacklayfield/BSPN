@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { useContext, useRef } from "react";
-import { Link } from "react-router-dom";
 import { Context } from "../../context/context";
 import axios from "axios";
 // import { NavBar } from "../../components/navBar";
@@ -28,45 +27,113 @@ export function Login() {
   console.log(user);
   return (
     <div>
-      <div class="m-5">
-        <h1>Admin Log In</h1>
+      <div>
+        <h1 className="web-title">Admin Login</h1>
+      </div>
+      <div
+        style={{
+          width: 500,
+          margin: 0,
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <body
+          style={{
+            borderRadius: 10,
+          }}
+        >
+          <form id="newtask" role="form" onSubmit={handleSubmit}>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="Username">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Enter your username"
+                  ref={user_reference}
+                />
+              </div>
+              <div class="form-group">
+                <label for="Password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter password"
+                  ref={password_reference}
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                class="btn btn-success btn-default pull-left"
+                disabled={isFetching}
+              >
+                <span class="glyphicon glyphicon-off"></span> Log In
+              </button>
+            </div>
+          </form>
+        </body>
       </div>
 
-      <body>
-        <form id="newtask" role="form" onSubmit={handleSubmit}>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="Username">Username</label>
-              <input
-                type="text"
-                class="form-control"
-                id="username"
-                placeholder="Enter your username"
-                ref={user_reference}
-              />
-            </div>
-            <div class="form-group">
-              <label for="Password">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="Enter password"
-                ref={password_reference}
-              />
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="submit"
-              class="btn btn-success btn-default pull-left"
-              disabled={isFetching}
-            >
-              <span class="glyphicon glyphicon-off"></span> Log In
-            </button>
-          </div>
-        </form>
-      </body>
+      {/* <Row
+        style={{
+          margin: 0,
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <Col></Col>
+        <Col xs={20}>
+          <body
+            style={{
+              borderRadius: 10,
+            }}
+          >
+            <form id="newtask" role="form" onSubmit={handleSubmit}>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="Username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    placeholder="Enter your username"
+                    ref={user_reference}
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Enter password"
+                    ref={password_reference}
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="submit"
+                  class="btn btn-success btn-default pull-left"
+                  disabled={isFetching}
+                >
+                  <span class="glyphicon glyphicon-off"></span> Log In
+                </button>
+              </div>
+            </form>
+          </body>
+        </Col>
+        <Col></Col>
+      </Row> */}
     </div>
   );
 }

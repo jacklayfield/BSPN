@@ -1,8 +1,6 @@
 .web-title {
   background: white;
   padding: 24px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
   color: rgb(0, 0, 0);
   font-size: 50px;
   font-weight: 1000;
