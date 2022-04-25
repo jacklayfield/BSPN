@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 
 export function Upload() {
   var the_sport = sessionStorage.getItem("sport");
+  var sport_url = sessionStorage.getItem("sport_url");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [author, setAuthor] = useState("");
@@ -33,7 +34,7 @@ export function Upload() {
     }
     try {
       const res = await axios.post("/articles", newPost);
-      window.location.replace("/" + the_sport);
+      window.location.replace(sport_url);
     } catch (error) {
       console.log("error with posting");
     }
@@ -85,14 +86,14 @@ export function Upload() {
             </div>
             <div class="form-group">
               <label for="sport">Sport</label>
-              <select
-                class="form-select"
+              <input
+                type="text"
+                class="form-control"
+                id="author"
+                value={the_sport}
+                disabled="true"
                 onChange={(e) => setSport(e.target.value)}
-              >
-                <option>{the_sport}</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-              </select>
+              />
             </div>
             {/* <div class="form-group">
               <label for="date">

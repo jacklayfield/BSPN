@@ -17,21 +17,18 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const article = await Article.findById(req.params.id);
-    if (article.author == req.body.author) {
-      try {
-        const updatedArticle = await Article.findByIdAndUpdate(
-          req.params.id,
-          {
-            $set: req.body,
-          },
-          { new: true }
-        );
-        res.status(200).json(updatedArticle);
-      } catch (error) {
-        res.status(500).json(error);
-      }
-    } else {
-      res.status(401).json("Unauthorized attempt to update article");
+
+    try {
+      const updatedArticle = await Article.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: req.body,
+        },
+        { new: true }
+      );
+      res.status(200).json(updatedArticle);
+    } catch (error) {
+      res.status(500).json(error);
     }
   } catch (error) {
     res.status(500).json(error);
@@ -42,15 +39,11 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const article = await Article.findById(req.params.id);
-    if (article.author == req.body.author) {
-      try {
-        await article.delete();
-        res.status(200).json("Article deleted");
-      } catch (error) {
-        res.status(500).json(error);
-      }
-    } else {
-      res.status(401).json("Unauthorized attempt to delete article");
+    try {
+      await article.delete();
+      res.status(200).json("Article deleted");
+    } catch (error) {
+      res.status(500).json(error);
     }
   } catch (error) {
     res.status(500).json(error);

@@ -7,14 +7,23 @@ import "../styling/article.css";
 import { Line } from "./line";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useContext } from "react";
+import { Context } from "../context/context";
 
 export default function SingleArticle() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
+  console.log(path);
   const image_path = "http://localhost:4000/images/";
+  const { user } = useContext(Context);
 
   const [loading, setLoading] = useState(true);
   const [article, setArticle] = useState([]);
+  const [editMode, setEditMode] = useState(false);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  var cur_url = window.location.href;
 
   useEffect(() => {
     const fetchArticle = async () => {
@@ -22,6 +31,8 @@ export default function SingleArticle() {
       try {
         const res = await axios.get("/articles/id=" + path);
         setArticle(res.data);
+        setTitle(res.data.title);
+        setDescription(res.data.description);
       } catch (error) {
         console.log(error);
       }
@@ -29,6 +40,31 @@ export default function SingleArticle() {
     };
     fetchArticle();
   }, []);
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/articles/${article._id}`);
+      window.location.replace("/");
+    } catch (error) {
+      console.log("could not delete");
+    }
+  };
+
+  const handleSave = async () => {
+    try {
+      await axios.put(`/articles/${article._id}`, {
+        title,
+        description,
+      });
+      window.location.replace(cur_url);
+      // setUpdateMode(false);
+    } catch (error) {}
+  };
+
+  const handleCancel = async () => {
+    setEditMode(false);
+  };
+
   return (
     <div>
       {loading && <div>Loading</div>}
@@ -47,13 +83,52 @@ export default function SingleArticle() {
                     alt=""
                   />
                 )}
-                <h2
-                  id="article-title"
-                  className="articleTitleSingle"
-                  style={{ padding: 5 }}
-                >
-                  {article.title}
-                </h2>
+                {editMode ? (
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="title"
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <h2 className="articleTitleSingle" style={{ padding: 5 }}>
+                      {article.title}
+                    </h2>
+                    {user != null && (
+                      <div>
+                        <Row>
+                          <Col style={{ paddingLeft: 20 }} xs="auto">
+                            <button
+                              className="btn btn-danger btn-sm"
+                              type="submit"
+                            >
+                              <i
+                                onClick={handleDelete}
+                                class="fa-solid fa-trash-can fa-2x"
+                              ></i>{" "}
+                            </button>
+                          </Col>
+                          <Col style={{ paddingLeft: 0 }} xs="auto">
+                            <button
+                              className="btn btn-primary btn-sm"
+                              type="submit"
+                            >
+                              <i
+                                onClick={() => setEditMode(true)}
+                                class="fa-solid fa-pen-to-square fa-2x"
+                              ></i>
+                            </button>
+                          </Col>
+                        </Row>
+                      </div>
+                    )}{" "}
+                  </div>
+                )}
                 <div id="article-content">
                   <div className="infoRow">
                     <div className="inlineL">{article.author}</div>
@@ -62,7 +137,47 @@ export default function SingleArticle() {
                     </div>
                   </div>
                   <Line />
-                  <p className="paragraph-text">{article.description}</p>
+                  {editMode ? (
+                    <div class="form-group">
+                      <label for="task-note">
+                        <span class="glyphicon glyphicon-pencil"></span> Content
+                      </label>
+                      <textarea
+                        class="form-control"
+                        rows="15"
+                        id="content"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                      ></textarea>
+                    </div>
+                  ) : (
+                    <p className="paragraph-text">{article.description}</p>
+                  )}
+                  {editMode && (
+                    <div style={{ paddingTop: 10 }}>
+                      <Row>
+                        <Col style={{ paddingLeft: 20 }} xs="auto">
+                          <button
+                            type="submit"
+                            class="btn btn-success btn-default pull-left"
+                            onClick={handleSave}
+                          >
+                            <span class="glyphicon glyphicon-off"></span> Save
+                            Changes
+                          </button>{" "}
+                        </Col>
+                        <Col style={{ paddingLeft: 1 }} xs="auto">
+                          <button
+                            type="submit"
+                            class="btn btn-danger btn-default pull-right"
+                            onClick={handleCancel}
+                          >
+                            <span class="glyphicon glyphicon-off"></span> Cancel
+                          </button>
+                        </Col>
+                      </Row>
+                    </div>
+                  )}
                 </div>
               </div>
             </Col>

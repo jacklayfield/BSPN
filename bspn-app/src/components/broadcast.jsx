@@ -4,6 +4,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Line } from "../components/line";
 
 export function Broadcast(stream) {
+  if (!JSON.stringify(stream).includes("watch?v=")) {
+    return (
+      <div style={{ paddingTop: 100 }}>
+        <h1>Invalid Link</h1>
+        <p>
+          The link you've provided is not a valid youtube stream. Please click
+          "Change Stream" and upload a valid link.
+        </p>
+      </div>
+    );
+  }
   var temp = JSON.stringify(stream).split("watch?v=")[1];
   var temp0 = temp.split('"}')[0];
   var newStream =

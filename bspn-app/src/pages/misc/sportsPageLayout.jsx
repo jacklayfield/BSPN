@@ -73,6 +73,7 @@ export function SportsPage({ sportname }) {
   }, []);
 
   sessionStorage.setItem("sport", sportname);
+  sessionStorage.setItem("sport_url", window.location.href);
 
   return (
     <div

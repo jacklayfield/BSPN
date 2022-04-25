@@ -15,20 +15,11 @@ export function Feed({ articles }) {
   return (
     <div>
       <Row className="gx-0">
-        <Col
-          style={{
-            paddingLeft: 24,
-            paddingRight: 24,
-          }}
-        >
-          <Score />
-        </Col>
-        <Col xs={5}>
+        <Col></Col>
+        <Col xs={7}>
           <Articles articles={articles} />
         </Col>
-        <Col style={{ paddingLeft: 24, paddingRight: 24 }}>
-          {/* <Broadcast /> */}
-        </Col>
+        <Col></Col>
       </Row>
     </div>
   );

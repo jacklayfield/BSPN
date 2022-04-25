@@ -34,9 +34,7 @@ export default function Home() {
       {!loading && (
         <div>
           <h1 className="web-title">BSPN</h1>
-          <Line />
           <Feed articles={articles} />
-          <Line />
         </div>
       )}
     </div>

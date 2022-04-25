@@ -15,7 +15,7 @@ export function Footer() {
           <a
             class="btn btn-primary btn-floating m-1"
             style={{ background: "#3b5998" }}
-            href="#!"
+            href="https://www.facebook.com/bobcatsportslive/"
             role="button"
           >
             <FaFacebook />
@@ -23,7 +23,7 @@ export function Footer() {
           <a
             class="btn btn-primary btn-floating m-1"
             style={{ background: "#55acee" }}
-            href="#!"
+            href="https://twitter.com/bobcat_live"
             role="button"
           >
             <FaTwitter />
@@ -31,7 +31,7 @@ export function Footer() {
           <a
             class="btn btn-primary btn-floating m-1"
             style={{ background: "#ac2bac" }}
-            href="#!"
+            href="https://www.instagram.com/bobcat_live/"
             role="button"
           >
             <FaInstagram />
