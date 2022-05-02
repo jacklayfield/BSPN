@@ -8,14 +8,12 @@ export function PageLayout({ children }) {
   return (
     <div
       style={{
-        position: "absolute",
         height: "100%",
         width: "100%",
         background: "rgb(227, 227, 227)",
-        position: "sticky",
       }}
     >
-      <NavBar />
+        <NavBar />
       <div
         style={{
           width: "100%",
