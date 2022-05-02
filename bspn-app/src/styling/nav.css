@@ -1,6 +1,6 @@
 nav {
   background: #daa520;
-  z-index:999;
+  z-index: 999;
 }
 #stickyNavbar {
   position: sticky;

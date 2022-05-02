@@ -12,6 +12,7 @@ export function PageLayout({ children }) {
         height: "100%",
         width: "100%",
         background: "rgb(227, 227, 227)",
+        position: "sticky",
       }}
     >
       <NavBar />

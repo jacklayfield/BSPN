@@ -29,11 +29,10 @@ export function NavBar() {
       <a className="navbar-brand mb-0 h1" href="/">
         <img
           className="d-inline-block align-top"
-          src="https://i.postimg.cc/tJ2mbWqY/205151241-1728263054037111-4601375418838296056-n-removebg-preview.png"
-          height="30"
-          width="35"
+          src="http://localhost:4000/images/bslogo5.png"
+          height="35"
+          width="186"
         />
-        Bobcat Sports
       </a>
       <button
         type="button"
