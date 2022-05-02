@@ -14,7 +14,7 @@ export default function Ad({ ad }) {
   return (
     <div>
       {ad.picture && (
-        <img className="articleImg" src={image_path + ad.picture} alt="" />
+        <img className="adImg" src={image_path + ad.picture} alt="" />
       )}
       {user != null && (
         <button

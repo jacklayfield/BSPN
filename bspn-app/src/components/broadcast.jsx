@@ -26,9 +26,11 @@ export function Broadcast(stream) {
       class="grid-item"
       style={{
         backgroundColor: "white",
-        borderRadius: "25px",
+        borderRadius: "15px",
         border: "5px solid",
         textAlign: "center",
+        boxShadow: "5px 5px 5px #a0a0a0",
+        padding: 2,
       }}
     >
       <h2

@@ -30,8 +30,9 @@ export function Player({ players }) {
     <div
       style={{
         backgroundColor: "white",
-        borderRadius: "25px",
+        borderRadius: "15px",
         border: "5px solid",
+        boxShadow: "5px 5px 5px #a0a0a0",
       }}
     >
       <h2

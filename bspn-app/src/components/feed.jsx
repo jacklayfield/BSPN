@@ -52,6 +52,7 @@ export function Feed({ articles, ads }) {
                 background: "white",
                 borderRadius: 5,
                 marginBottom: 10,
+                boxShadow: "5px 5px 5px #a0a0a0",
               }}
             >
               {file && (
